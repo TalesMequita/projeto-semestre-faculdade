@@ -17,7 +17,7 @@ namespace Projeto_Faculdade
             InitializeComponent();
         }
 
-        private void btn_cad_produtos_Click(object sender, EventArgs e) //Cadastro de produtos
+        private void btn_cad_produtos_Click(object sender, EventArgs e) //Botão de cadastro de produtos
         {
             frm_produtos frm = new frm_produtos();
             frm.Show();
@@ -63,6 +63,11 @@ namespace Projeto_Faculdade
         {
             frm_clientes frm = new frm_clientes();  
             frm.Show(); 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
