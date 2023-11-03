@@ -55,7 +55,7 @@ namespace Projeto_Faculdade
 
         private void btn_grafico_Click(object sender, EventArgs e)
         {
-            frm_grafico_produtos frm = new frm_grafico_produtos(); 
+            frm.troca_usuario frm = new frm.troca_usuario(); 
             frm.Show(); 
         }
 

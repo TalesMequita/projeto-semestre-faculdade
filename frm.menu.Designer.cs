@@ -170,11 +170,7 @@
             this.btn_relatorios.Name = "btn_relatorios";
             this.btn_relatorios.Size = new System.Drawing.Size(85, 95);
             this.btn_relatorios.TabIndex = 5;
-<<<<<<< Updated upstream
-            this.btn_relatorios.Text = "APAGAR";
-=======
             this.btn_relatorios.Text = "Vendas";
->>>>>>> Stashed changes
             this.btn_relatorios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_relatorios.UseVisualStyleBackColor = false;
             this.btn_relatorios.Click += new System.EventHandler(this.btn_relatorios_Click);
