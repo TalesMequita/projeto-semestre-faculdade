@@ -40,6 +40,7 @@
             this.btn_vendas = new System.Windows.Forms.Button();
             this.btn_faturamento = new System.Windows.Forms.Button();
             this.btn_grafico = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.cadastroToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(574, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(667, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,7 +86,7 @@
             this.btn_cad_produtos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_cad_produtos.Image = global::Projeto_Faculdade.Properties.Resources.cad_prod__75;
             this.btn_cad_produtos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_cad_produtos.Location = new System.Drawing.Point(192, 201);
+            this.btn_cad_produtos.Location = new System.Drawing.Point(96, 266);
             this.btn_cad_produtos.Name = "btn_cad_produtos";
             this.btn_cad_produtos.Size = new System.Drawing.Size(85, 95);
             this.btn_cad_produtos.TabIndex = 1;
@@ -105,7 +106,7 @@
             this.btn_cad_categorias.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_cad_categorias.Image = global::Projeto_Faculdade.Properties.Resources.categorias;
             this.btn_cad_categorias.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_cad_categorias.Location = new System.Drawing.Point(311, 201);
+            this.btn_cad_categorias.Location = new System.Drawing.Point(216, 266);
             this.btn_cad_categorias.Name = "btn_cad_categorias";
             this.btn_cad_categorias.Size = new System.Drawing.Size(85, 95);
             this.btn_cad_categorias.TabIndex = 2;
@@ -123,12 +124,13 @@
             this.btn_cad_clientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btn_cad_clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_cad_clientes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_cad_clientes.Image = global::Projeto_Faculdade.Properties.Resources._2;
             this.btn_cad_clientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_cad_clientes.Location = new System.Drawing.Point(431, 201);
+            this.btn_cad_clientes.Location = new System.Drawing.Point(455, 266);
             this.btn_cad_clientes.Name = "btn_cad_clientes";
             this.btn_cad_clientes.Size = new System.Drawing.Size(85, 95);
             this.btn_cad_clientes.TabIndex = 3;
-            this.btn_cad_clientes.Text = "Cadastrar Clientes";
+            this.btn_cad_clientes.Text = "Encerrar";
             this.btn_cad_clientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_cad_clientes.UseVisualStyleBackColor = false;
             this.btn_cad_clientes.Click += new System.EventHandler(this.btn_cad_clientes_Click);
@@ -142,8 +144,9 @@
             this.btn_estoque.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btn_estoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_estoque.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_estoque.Image = global::Projeto_Faculdade.Properties.Resources.ca;
             this.btn_estoque.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_estoque.Location = new System.Drawing.Point(192, 68);
+            this.btn_estoque.Location = new System.Drawing.Point(216, 133);
             this.btn_estoque.Name = "btn_estoque";
             this.btn_estoque.Size = new System.Drawing.Size(85, 95);
             this.btn_estoque.TabIndex = 4;
@@ -161,12 +164,17 @@
             this.btn_relatorios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btn_relatorios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_relatorios.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_relatorios.Image = global::Projeto_Faculdade.Properties.Resources.pracheta1;
             this.btn_relatorios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_relatorios.Location = new System.Drawing.Point(431, 68);
+            this.btn_relatorios.Location = new System.Drawing.Point(455, 133);
             this.btn_relatorios.Name = "btn_relatorios";
             this.btn_relatorios.Size = new System.Drawing.Size(85, 95);
             this.btn_relatorios.TabIndex = 5;
+<<<<<<< Updated upstream
             this.btn_relatorios.Text = "APAGAR";
+=======
+            this.btn_relatorios.Text = "Vendas";
+>>>>>>> Stashed changes
             this.btn_relatorios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_relatorios.UseVisualStyleBackColor = false;
             this.btn_relatorios.Click += new System.EventHandler(this.btn_relatorios_Click);
@@ -180,8 +188,9 @@
             this.btn_vendas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btn_vendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_vendas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_vendas.Image = global::Projeto_Faculdade.Properties.Resources.caixa_de_di;
             this.btn_vendas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_vendas.Location = new System.Drawing.Point(72, 68);
+            this.btn_vendas.Location = new System.Drawing.Point(96, 133);
             this.btn_vendas.Name = "btn_vendas";
             this.btn_vendas.Size = new System.Drawing.Size(85, 95);
             this.btn_vendas.TabIndex = 6;
@@ -199,8 +208,9 @@
             this.btn_faturamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btn_faturamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_faturamento.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_faturamento.Image = global::Projeto_Faculdade.Properties.Resources.dinheiro;
             this.btn_faturamento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_faturamento.Location = new System.Drawing.Point(311, 68);
+            this.btn_faturamento.Location = new System.Drawing.Point(335, 133);
             this.btn_faturamento.Name = "btn_faturamento";
             this.btn_faturamento.Size = new System.Drawing.Size(85, 95);
             this.btn_faturamento.TabIndex = 7;
@@ -218,22 +228,35 @@
             this.btn_grafico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btn_grafico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_grafico.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_grafico.Image = global::Projeto_Faculdade.Properties.Resources.usuario;
             this.btn_grafico.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_grafico.Location = new System.Drawing.Point(72, 201);
+            this.btn_grafico.Location = new System.Drawing.Point(335, 266);
             this.btn_grafico.Name = "btn_grafico";
             this.btn_grafico.Size = new System.Drawing.Size(85, 95);
             this.btn_grafico.TabIndex = 8;
-            this.btn_grafico.Text = "Relatorios de Vendas";
+            this.btn_grafico.Text = "Trocar de Usuario";
             this.btn_grafico.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_grafico.UseVisualStyleBackColor = false;
             this.btn_grafico.Click += new System.EventHandler(this.btn_grafico_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.Location = new System.Drawing.Point(136, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(373, 31);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "CENTRAL DE ATEDIMENTO";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.findo_sistema_original;
-            this.ClientSize = new System.Drawing.Size(574, 356);
+            this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
+            this.ClientSize = new System.Drawing.Size(667, 393);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_grafico);
             this.Controls.Add(this.btn_faturamento);
             this.Controls.Add(this.btn_vendas);
@@ -268,6 +291,7 @@
         private System.Windows.Forms.Button btn_vendas;
         private System.Windows.Forms.Button btn_faturamento;
         private System.Windows.Forms.Button btn_grafico;
+        private System.Windows.Forms.Label label1;
     }
 }
 
