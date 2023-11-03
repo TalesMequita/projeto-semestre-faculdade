@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frm_clientes.cs">
+    <Compile Include="Frm.encerrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_clientes.Designer.cs">
-      <DependentUpon>frm_clientes.cs</DependentUpon>
+    <Compile Include="Frm.encerrar.Designer.cs">
+      <DependentUpon>Frm.encerrar.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_categorias.cs">
       <SubType>Form</SubType>
@@ -76,11 +76,11 @@
     <Compile Include="frm_faturamento.Designer.cs">
       <DependentUpon>frm_faturamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_grafico_produtos.cs">
+    <Compile Include="frm.troca_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_grafico_produtos.Designer.cs">
-      <DependentUpon>frm_grafico_produtos.cs</DependentUpon>
+    <Compile Include="frm.troca_usuario.Designer.cs">
+      <DependentUpon>frm.troca_usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_produtos.cs">
       <SubType>Form</SubType>
@@ -102,11 +102,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_caixa.resx">
+      <DependentUpon>frm_caixa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_categorias.resx">
       <DependentUpon>frm_categorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm.menu.resx">
       <DependentUpon>frm.menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_estoque.resx">
+      <DependentUpon>frm_estoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_produtos.resx">
       <DependentUpon>frm_produtos.cs</DependentUpon>
@@ -142,6 +148,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagens\categorias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\pal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\caixa de di.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\ca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\pracheta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\dinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\dinheiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
