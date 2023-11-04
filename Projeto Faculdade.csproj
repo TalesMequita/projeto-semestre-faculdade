@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frm.encerrar.cs">
+    <Compile Include="frm_encerrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm.encerrar.Designer.cs">
-      <DependentUpon>Frm.encerrar.cs</DependentUpon>
+    <Compile Include="frm_encerrar.Designer.cs">
+      <DependentUpon>frm_encerrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_categorias.cs">
       <SubType>Form</SubType>
@@ -58,11 +64,11 @@
     <Compile Include="frm_categorias.Designer.cs">
       <DependentUpon>frm_categorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm.menu.cs">
+    <Compile Include="frm_menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm.menu.Designer.cs">
-      <DependentUpon>frm.menu.cs</DependentUpon>
+    <Compile Include="frm_menu.Designer.cs">
+      <DependentUpon>frm_menu.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_estoque.cs">
       <SubType>Form</SubType>
@@ -76,11 +82,11 @@
     <Compile Include="frm_faturamento.Designer.cs">
       <DependentUpon>frm_faturamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm.troca_usuario.cs">
+    <Compile Include="frm_troca_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm.troca_usuario.Designer.cs">
-      <DependentUpon>frm.troca_usuario.cs</DependentUpon>
+    <Compile Include="frm_troca_usuario.Designer.cs">
+      <DependentUpon>frm_troca_usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_produtos.cs">
       <SubType>Form</SubType>
@@ -88,11 +94,11 @@
     <Compile Include="frm_produtos.Designer.cs">
       <DependentUpon>frm_produtos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_relatorios.cs">
+    <Compile Include="frm_vendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_relatorios.Designer.cs">
-      <DependentUpon>frm_relatorios.cs</DependentUpon>
+    <Compile Include="frm_vendas.Designer.cs">
+      <DependentUpon>frm_vendas.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_caixa.cs">
       <SubType>Form</SubType>
@@ -102,14 +108,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_caixa.resx">
       <DependentUpon>frm_caixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_categorias.resx">
       <DependentUpon>frm_categorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm.menu.resx">
-      <DependentUpon>frm.menu.cs</DependentUpon>
+    <EmbeddedResource Include="frm_menu.resx">
+      <DependentUpon>frm_menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_estoque.resx">
       <DependentUpon>frm_estoque.cs</DependentUpon>

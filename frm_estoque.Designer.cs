@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,11 +48,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(320, 9);
+            this.label1.Location = new System.Drawing.Point(197, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 31);
+            this.label1.Size = new System.Drawing.Size(375, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ESTOQUE";
+            this.label1.Text = "ESTOQUE DOS PRODUTOS";
             // 
             // label2
             // 
@@ -73,15 +73,15 @@
             this.textBox1.Size = new System.Drawing.Size(421, 26);
             this.textBox1.TabIndex = 2;
             // 
-            // button1
+            // buttonBuscar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(614, 86);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 26);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "BUSCAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonBuscar.Location = new System.Drawing.Point(614, 86);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(97, 26);
+            this.buttonBuscar.TabIndex = 3;
+            this.buttonBuscar.Text = "BUSCAR";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -157,14 +157,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(639, 177);
             this.dataGridView1.TabIndex = 10;
             // 
-            // button2
+            // buttonVoltar
             // 
-            this.button2.Location = new System.Drawing.Point(3, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Voltar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Location = new System.Drawing.Point(3, 9);
+            this.buttonVoltar.Name = "buttonVoltar";
+            this.buttonVoltar.Size = new System.Drawing.Size(75, 23);
+            this.buttonVoltar.TabIndex = 11;
+            this.buttonVoltar.Text = "Voltar";
+            this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // frm_estoque
             // 
@@ -172,7 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(760, 432);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -180,7 +181,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -197,7 +198,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -205,6 +206,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonVoltar;
     }
 }

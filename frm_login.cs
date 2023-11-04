@@ -10,17 +10,13 @@ using System.Windows.Forms;
 
 namespace Projeto_Faculdade
 {
-    public partial class frm_categorias : Form
+    public partial class frm_login : Form
     {
-        public frm_categorias()
-        {
-            InitializeComponent();
-        }
 
-        private void bnt_voltar(object sender, EventArgs e)
+        private void bnt_entrar(object sender, EventArgs e)
         {
             frm_menu frm = new frm_menu();
-
+            
             if (this.Visible)
             {
                 this.Hide();
@@ -29,6 +25,11 @@ namespace Projeto_Faculdade
             frm.ShowDialog();
 
             Application.Exit();
+        }
+
+        private void frm_login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -21,5 +21,19 @@ namespace Projeto_Faculdade
         {
 
         }
+
+        private void button_voltar_Click(object sender, EventArgs e)
+        {
+            frm_menu frm = new frm_menu();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            Application.Exit();
+        }
     }
 }

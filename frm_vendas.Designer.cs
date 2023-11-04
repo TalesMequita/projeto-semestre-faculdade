@@ -1,6 +1,6 @@
 ﻿namespace Projeto_Faculdade
 {
-    partial class frm_relatorios
+    partial class frm_vendas
     {
         /// <summary>
         /// Required designer variable.

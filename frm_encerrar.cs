@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto_Faculdade
 {
-    public partial class Frm : Form
+    public partial class frm_login : Form
     {
-        public Frm()
+        public frm_login()
         {
             InitializeComponent();
         }

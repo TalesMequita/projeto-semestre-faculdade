@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto_Faculdade
 {
-    public partial class frm_relatorios : Form
+    public partial class frm_vendas : Form
     {
-        public frm_relatorios()
+        public frm_vendas()
         {
             InitializeComponent();
         }
