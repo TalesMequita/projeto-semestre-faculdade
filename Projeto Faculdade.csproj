@@ -46,7 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Include="frm_clientes.cs">
+=======
+    <Compile Include="frm_alert_encerrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_alert_encerrar.Designer.cs">
+      <DependentUpon>frm_alert_encerrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_encerrar.cs">
+>>>>>>> Stashed changes
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_clientes.Designer.cs">
@@ -102,6 +112,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< Updated upstream
+=======
+    <EmbeddedResource Include="frm_alert_encerrar.resx">
+      <DependentUpon>frm_alert_encerrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_caixa.resx">
+      <DependentUpon>frm_caixa.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> Stashed changes
     <EmbeddedResource Include="frm_categorias.resx">
       <DependentUpon>frm_categorias.cs</DependentUpon>
     </EmbeddedResource>

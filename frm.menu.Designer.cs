@@ -32,6 +32,10 @@
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemEstoque = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemVendas = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemFaturamento = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_cad_produtos = new System.Windows.Forms.Button();
             this.btn_cad_categorias = new System.Windows.Forms.Button();
             this.btn_cad_clientes = new System.Windows.Forms.Button();
@@ -47,12 +51,14 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem});
+            this.cadastroToolStripMenuItem,
+            this.relatorioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(574, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // cadastroToolStripMenuItem
             // 
@@ -68,12 +74,45 @@
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.menuCadProduto);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
             this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.menuCadCategoria);
+            // 
+            // relatorioToolStripMenuItem
+            // 
+            this.relatorioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemEstoque,
+            this.itemVendas,
+            this.itemFaturamento});
+            this.relatorioToolStripMenuItem.Name = "relatorioToolStripMenuItem";
+            this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatorioToolStripMenuItem.Text = "Relatórios";
+            // 
+            // itemEstoque
+            // 
+            this.itemEstoque.Name = "itemEstoque";
+            this.itemEstoque.Size = new System.Drawing.Size(142, 22);
+            this.itemEstoque.Text = "Estoque";
+            this.itemEstoque.Click += new System.EventHandler(this.menuRelatEstoque);
+            // 
+            // itemVendas
+            // 
+            this.itemVendas.Name = "itemVendas";
+            this.itemVendas.Size = new System.Drawing.Size(142, 22);
+            this.itemVendas.Text = "Vendas";
+            this.itemVendas.Click += new System.EventHandler(this.menuRelatVendas);
+            // 
+            // itemFaturamento
+            // 
+            this.itemFaturamento.Name = "itemFaturamento";
+            this.itemFaturamento.Size = new System.Drawing.Size(142, 22);
+            this.itemFaturamento.Text = "Faturamento";
+            this.itemFaturamento.Click += new System.EventHandler(this.menuRelatFaturamento);
             // 
             // btn_cad_produtos
             // 
@@ -268,7 +307,16 @@
         private System.Windows.Forms.Button btn_relatorios;
         private System.Windows.Forms.Button btn_vendas;
         private System.Windows.Forms.Button btn_faturamento;
+<<<<<<< Updated upstream:frm.menu.Designer.cs
         private System.Windows.Forms.Button btn_grafico;
+=======
+        private System.Windows.Forms.Button btn_troca_usuario;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem relatorioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itemEstoque;
+        private System.Windows.Forms.ToolStripMenuItem itemVendas;
+        private System.Windows.Forms.ToolStripMenuItem itemFaturamento;
+>>>>>>> Stashed changes:frm_menu.Designer.cs
     }
 }
 
