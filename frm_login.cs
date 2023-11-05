@@ -24,7 +24,7 @@ namespace Projeto_Faculdade
 
             frm.ShowDialog();
 
-            Application.Exit();
+            this.Close();
         }
 
         private void frm_login_Load(object sender, EventArgs e)

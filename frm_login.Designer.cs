@@ -11,14 +11,6 @@
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.
         /// </param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         #region Windows Form Designer generated code
 
@@ -33,7 +25,6 @@
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.buttonEntrar = new System.Windows.Forms.Button();
-            this.linkLabelEsqueci = new System.Windows.Forms.LinkLabel();
             this.linkLabelCadastrar = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
@@ -90,19 +81,6 @@
             this.buttonEntrar.UseVisualStyleBackColor = true;
             this.buttonEntrar.Click += new System.EventHandler(this.bnt_entrar);
             // 
-            // linkLabelEsqueci
-            // 
-            this.linkLabelEsqueci.AutoSize = true;
-            this.linkLabelEsqueci.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabelEsqueci.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.linkLabelEsqueci.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelEsqueci.Location = new System.Drawing.Point(110, 237);
-            this.linkLabelEsqueci.Name = "linkLabelEsqueci";
-            this.linkLabelEsqueci.Size = new System.Drawing.Size(149, 17);
-            this.linkLabelEsqueci.TabIndex = 5;
-            this.linkLabelEsqueci.TabStop = true;
-            this.linkLabelEsqueci.Text = "Esqueceu sua senha?";
-            // 
             // linkLabelCadastrar
             // 
             this.linkLabelCadastrar.ActiveLinkColor = System.Drawing.Color.Red;
@@ -110,7 +88,7 @@
             this.linkLabelCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.linkLabelCadastrar.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelCadastrar.Location = new System.Drawing.Point(110, 273);
+            this.linkLabelCadastrar.Location = new System.Drawing.Point(107, 233);
             this.linkLabelCadastrar.Name = "linkLabelCadastrar";
             this.linkLabelCadastrar.Size = new System.Drawing.Size(190, 17);
             this.linkLabelCadastrar.TabIndex = 6;
@@ -124,13 +102,13 @@
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(454, 352);
             this.Controls.Add(this.linkLabelCadastrar);
-            this.Controls.Add(this.linkLabelEsqueci);
             this.Controls.Add(this.buttonEntrar);
             this.Controls.Add(this.textBoxSenha);
             this.Controls.Add(this.textBoxUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frm_login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm";
             this.Load += new System.EventHandler(this.frm_login_Load);
             this.ResumeLayout(false);
@@ -145,7 +123,6 @@
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.TextBox textBoxSenha;
         private System.Windows.Forms.Button buttonEntrar;
-        private System.Windows.Forms.LinkLabel linkLabelEsqueci;
         private System.Windows.Forms.LinkLabel linkLabelCadastrar;
     }
 }

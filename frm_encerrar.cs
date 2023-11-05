@@ -10,11 +10,32 @@ using System.Windows.Forms;
 
 namespace Projeto_Faculdade
 {
-    public partial class frm_login : Form
+    public partial class frm_encerrar : Form
     {
-        public frm_login()
+        public frm_encerrar()
         {
             InitializeComponent();
+            this.TopMost = true;
+        }
+
+        private void bnt_Sim(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bnt_Nao(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_alert_encerrar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

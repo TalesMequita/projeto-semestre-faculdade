@@ -1,6 +1,6 @@
 ﻿namespace Projeto_Faculdade
 {
-    partial class frm_grafico_produtos
+    partial class frm_cadastro_usuario
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frm_grafico_produtos";
+            this.Text = "frm_cadastro";
         }
 
         #endregion

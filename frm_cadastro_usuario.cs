@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto_Faculdade
 {
-    public partial class frm_grafico_produtos : Form
+    public partial class frm_cadastro_usuario : Form
     {
-        public frm_grafico_produtos()
+        public frm_cadastro_usuario()
         {
             InitializeComponent();
         }

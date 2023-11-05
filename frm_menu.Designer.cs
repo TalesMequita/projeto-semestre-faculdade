@@ -32,6 +32,10 @@
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemVendas = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemFaturamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_cad_produtos = new System.Windows.Forms.Button();
             this.btn_cad_categorias = new System.Windows.Forms.Button();
             this.btn_encerrar = new System.Windows.Forms.Button();
@@ -48,12 +52,14 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem});
+            this.cadastroToolStripMenuItem,
+            this.relatorioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(667, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // cadastroToolStripMenuItem
             // 
@@ -69,12 +75,45 @@
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.menuCadProdutos);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
             this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.menuCadCategoria);
+            // 
+            // relatorioToolStripMenuItem
+            // 
+            this.relatorioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemVendas,
+            this.itemFaturamento,
+            this.itemEstoque});
+            this.relatorioToolStripMenuItem.Name = "relatorioToolStripMenuItem";
+            this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatorioToolStripMenuItem.Text = "Relatórios";
+            // 
+            // itemVendas
+            // 
+            this.itemVendas.Name = "itemVendas";
+            this.itemVendas.Size = new System.Drawing.Size(142, 22);
+            this.itemVendas.Text = "Vendas";
+            this.itemVendas.Click += new System.EventHandler(this.bnt_vendas);
+            // 
+            // itemFaturamento
+            // 
+            this.itemFaturamento.Name = "itemFaturamento";
+            this.itemFaturamento.Size = new System.Drawing.Size(142, 22);
+            this.itemFaturamento.Text = "Faturamento";
+            this.itemFaturamento.Click += new System.EventHandler(this.bnt_Faturamento);
+            // 
+            // itemEstoque
+            // 
+            this.itemEstoque.Name = "itemEstoque";
+            this.itemEstoque.Size = new System.Drawing.Size(142, 22);
+            this.itemEstoque.Text = "Estoque";
+            this.itemEstoque.Click += new System.EventHandler(this.bnt_estoque);
             // 
             // btn_cad_produtos
             // 
@@ -241,7 +280,7 @@
             this.btn_troca_usuario.Text = "Trocar de Usuario";
             this.btn_troca_usuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_troca_usuario.UseVisualStyleBackColor = false;
-            this.btn_troca_usuario.Click += new System.EventHandler(this.btn_troca_user_Click);
+            this.btn_troca_usuario.Click += new System.EventHandler(this.btn_troca_user);
             // 
             // label1
             // 
@@ -297,6 +336,10 @@
         private System.Windows.Forms.Button btn_faturamento;
         private System.Windows.Forms.Button btn_troca_usuario;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem relatorioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itemVendas;
+        private System.Windows.Forms.ToolStripMenuItem itemFaturamento;
+        private System.Windows.Forms.ToolStripMenuItem itemEstoque;
     }
 }
 

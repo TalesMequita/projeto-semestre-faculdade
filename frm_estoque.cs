@@ -17,7 +17,7 @@ namespace Projeto_Faculdade
             InitializeComponent();
         }
 
-        private void button_voltar_Click(object sender, EventArgs e)
+        private void bnt_menu_principal(object sender, EventArgs e)
         {
             frm_menu frm = new frm_menu();
 
@@ -28,7 +28,77 @@ namespace Projeto_Faculdade
 
             frm.ShowDialog();
 
-            Application.Exit();
+            this.Close();
+        }
+
+        private void bnt_cad_produtos(object sender, EventArgs e)
+        {
+            frm_produtos frm = new frm_produtos();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void bnt_cad_categoria(object sender, EventArgs e)
+        {
+            frm_categorias frm = new frm_categorias();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void bnt_relat_vendas(object sender, EventArgs e)
+        {
+            frm_vendas frm = new frm_vendas();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void bnt_relat_faturamento(object sender, EventArgs e)
+        {
+            frm_faturamento frm = new frm_faturamento();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void bnt_relat_estoque(object sender, EventArgs e)
+        {
+            frm_estoque frm = new frm_estoque();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
         }
     }
 }

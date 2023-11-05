@@ -17,7 +17,7 @@ namespace Projeto_Faculdade
             InitializeComponent();
         }
 
-        private void btn_cad_produtos_Click(object sender, EventArgs e) //Botão de cadastro de produtos
+        private void btn_cad_produtos_Click(object sender, EventArgs e) // Botão de cadastro de produtos
         {
             frm_produtos frm = new frm_produtos();
 
@@ -28,7 +28,7 @@ namespace Projeto_Faculdade
 
             frm.ShowDialog();
 
-            Application.Exit();
+            this.Close();
         }
 
         private void frm_menu_Load(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace Projeto_Faculdade
 
             frm.ShowDialog();
 
-            Application.Exit();
+            this.Close();
         }
 
         private void btn_faturamento_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace Projeto_Faculdade
 
             frm.ShowDialog();
 
-            Application.Exit();
+            this.Close();
         }
 
         private void btn_estoque_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace Projeto_Faculdade
 
             frm.ShowDialog();
 
-            Application.Exit();
+            this.Close();
         }
 
         private void btn_vendas_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace Projeto_Faculdade
 
             frm.ShowDialog();
 
-            Application.Exit();
+            this.Close();
         }
 
         private void btn_caixa_Click(object sender, EventArgs e)
@@ -103,26 +103,19 @@ namespace Projeto_Faculdade
 
             frm.ShowDialog();
 
-            Application.Exit();
-        }
-
-        private void btn_troca_user_Click(object sender, EventArgs e)
-        {
-            frm_login frm = new frm_login();
-
-            if (this.Visible)
-            {
-                this.Hide();
-            }
-
-            frm.ShowDialog();
-
-            Application.Exit();
+            this.Close();
         }
 
         private void btn_encerrar_Click(object sender, EventArgs e)
         {
-            frm_login frm = new frm_login();
+            frm_encerrar frm = new frm_encerrar();
+
+            frm.ShowDialog();
+        }
+
+        private void menuCadProdutos(object sender, EventArgs e)
+        {
+            frm_produtos frm = new frm_produtos ();
 
             if (this.Visible)
             {
@@ -131,7 +124,82 @@ namespace Projeto_Faculdade
 
             frm.ShowDialog();
 
-            Application.Exit();
+            this.Close();
+        }
+
+        private void menuCadCategoria(object sender, EventArgs e)
+        {
+            frm_categorias frm = new frm_categorias();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void bnt_vendas(object sender, EventArgs e)
+        {
+            frm_vendas frm = new frm_vendas();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void bnt_Faturamento(object sender, EventArgs e)
+        {
+            frm_faturamento frm = new frm_faturamento();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void bnt_estoque(object sender, EventArgs e)
+        {
+            frm_estoque frm = new frm_estoque();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btn_troca_user(object sender, EventArgs e)
+        {
+            frm_login frm = new frm_login();
+
+            if(this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+            this.Close();
+
         }
     }
 }
