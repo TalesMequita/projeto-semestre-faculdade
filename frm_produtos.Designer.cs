@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_descricao = new System.Windows.Forms.TextBox();
-            this.txt_valor = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBoxValor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.CB_categoria = new System.Windows.Forms.TextBox();
+            this.textBoxCategoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_novo = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +47,14 @@
             this.itemVendas = new System.Windows.Forms.ToolStripMenuItem();
             this.itemFaturamento = new System.Windows.Forms.ToolStripMenuItem();
             this.itemEstoque = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxMarca = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePickerValidade = new System.Windows.Forms.DateTimePicker();
+            this.textBoxQuantidade = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,117 +63,97 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(14, 112);
+            this.label1.Location = new System.Drawing.Point(15, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Descrição";
+            this.label1.Text = "Nome:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txt_descricao
+            // textBoxNome
             // 
-            this.txt_descricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_descricao.Location = new System.Drawing.Point(100, 106);
-            this.txt_descricao.Name = "txt_descricao";
-            this.txt_descricao.Size = new System.Drawing.Size(100, 26);
-            this.txt_descricao.TabIndex = 1;
+            this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxNome.Location = new System.Drawing.Point(116, 120);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(449, 26);
+            this.textBoxNome.TabIndex = 1;
             // 
-            // txt_valor
+            // textBoxValor
             // 
-            this.txt_valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_valor.Location = new System.Drawing.Point(268, 106);
-            this.txt_valor.Name = "txt_valor";
-            this.txt_valor.Size = new System.Drawing.Size(100, 26);
-            this.txt_valor.TabIndex = 3;
+            this.textBoxValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxValor.Location = new System.Drawing.Point(116, 248);
+            this.textBoxValor.Name = "textBoxValor";
+            this.textBoxValor.Size = new System.Drawing.Size(154, 26);
+            this.textBoxValor.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(216, 112);
+            this.label2.Location = new System.Drawing.Point(15, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Valor";
             // 
-            // CB_categoria
+            // textBoxCategoria
             // 
-            this.CB_categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.CB_categoria.Location = new System.Drawing.Point(458, 106);
-            this.CB_categoria.Name = "CB_categoria";
-            this.CB_categoria.Size = new System.Drawing.Size(100, 26);
-            this.CB_categoria.TabIndex = 5;
+            this.textBoxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxCategoria.Location = new System.Drawing.Point(116, 152);
+            this.textBoxCategoria.Name = "textBoxCategoria";
+            this.textBoxCategoria.Size = new System.Drawing.Size(277, 26);
+            this.textBoxCategoria.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(374, 112);
+            this.label3.Location = new System.Drawing.Point(15, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Categoria";
             // 
-            // btn_novo
-            // 
-            this.btn_novo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_novo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_novo.Location = new System.Drawing.Point(100, 152);
-            this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(63, 33);
-            this.btn_novo.TabIndex = 6;
-            this.btn_novo.Text = "Novo";
-            this.btn_novo.UseVisualStyleBackColor = true;
-            // 
             // btn_cadastrar
             // 
             this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cadastrar.Location = new System.Drawing.Point(188, 152);
+            this.btn_cadastrar.Location = new System.Drawing.Point(182, 332);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(88, 33);
             this.btn_cadastrar.TabIndex = 7;
             this.btn_cadastrar.Text = "Cadastrar";
             this.btn_cadastrar.UseVisualStyleBackColor = true;
+            this.btn_cadastrar.Click += new System.EventHandler(this.bnt_cad_produto);
             // 
             // btn_excluir
             // 
             this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_excluir.Location = new System.Drawing.Point(304, 152);
+            this.btn_excluir.Location = new System.Drawing.Point(298, 332);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(69, 33);
             this.btn_excluir.TabIndex = 8;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.bnt_excluir);
             // 
-            // btn_cancelar
+            // dataGridViewProdutos
             // 
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cancelar.Location = new System.Drawing.Point(396, 152);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(82, 33);
-            this.btn_cancelar.TabIndex = 9;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 204);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(531, 150);
-            this.dataGridView1.TabIndex = 10;
+            this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(12, 371);
+            this.dataGridViewProdutos.Name = "dataGridViewProdutos";
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(658, 161);
+            this.dataGridViewProdutos.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label4.Location = new System.Drawing.Point(121, 35);
+            this.label4.Location = new System.Drawing.Point(147, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(373, 31);
             this.label4.TabIndex = 12;
@@ -183,7 +168,7 @@
             this.relatorioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(574, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(686, 24);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -206,14 +191,14 @@
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.bnt_cad_produtos);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
             this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.bnt_cad_categoria);
             // 
@@ -230,48 +215,122 @@
             // itemVendas
             // 
             this.itemVendas.Name = "itemVendas";
-            this.itemVendas.Size = new System.Drawing.Size(180, 22);
+            this.itemVendas.Size = new System.Drawing.Size(142, 22);
             this.itemVendas.Text = "Vendas";
             this.itemVendas.Click += new System.EventHandler(this.bnt_relat_vendas);
             // 
             // itemFaturamento
             // 
             this.itemFaturamento.Name = "itemFaturamento";
-            this.itemFaturamento.Size = new System.Drawing.Size(180, 22);
+            this.itemFaturamento.Size = new System.Drawing.Size(142, 22);
             this.itemFaturamento.Text = "Faturamento";
             this.itemFaturamento.Click += new System.EventHandler(this.bnt_relat_faturamento);
             // 
             // itemEstoque
             // 
             this.itemEstoque.Name = "itemEstoque";
-            this.itemEstoque.Size = new System.Drawing.Size(180, 22);
+            this.itemEstoque.Size = new System.Drawing.Size(142, 22);
             this.itemEstoque.Text = "Estoque";
             this.itemEstoque.Click += new System.EventHandler(this.bnt_relat_estoque);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.Location = new System.Drawing.Point(15, 190);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Validade";
+            // 
+            // textBoxMarca
+            // 
+            this.textBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxMarca.Location = new System.Drawing.Point(116, 216);
+            this.textBoxMarca.Name = "textBoxMarca";
+            this.textBoxMarca.Size = new System.Drawing.Size(222, 26);
+            this.textBoxMarca.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label6.Location = new System.Drawing.Point(15, 222);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Marca";
+            // 
+            // dateTimePickerValidade
+            // 
+            this.dateTimePickerValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dateTimePickerValidade.Location = new System.Drawing.Point(116, 184);
+            this.dateTimePickerValidade.Name = "dateTimePickerValidade";
+            this.dateTimePickerValidade.Size = new System.Drawing.Size(277, 26);
+            this.dateTimePickerValidade.TabIndex = 19;
+            // 
+            // textBoxQuantidade
+            // 
+            this.textBoxQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxQuantidade.Location = new System.Drawing.Point(116, 280);
+            this.textBoxQuantidade.Name = "textBoxQuantidade";
+            this.textBoxQuantidade.Size = new System.Drawing.Size(100, 26);
+            this.textBoxQuantidade.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label7.Location = new System.Drawing.Point(15, 286);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 20);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Quantidade";
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_cancelar.Location = new System.Drawing.Point(390, 332);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(82, 33);
+            this.btn_cancelar.TabIndex = 9;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.bnt_cancelar);
             // 
             // frm_produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
-            this.ClientSize = new System.Drawing.Size(574, 377);
+            this.ClientSize = new System.Drawing.Size(686, 544);
+            this.Controls.Add(this.textBoxQuantidade);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dateTimePickerValidade);
+            this.Controls.Add(this.textBoxMarca);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewProdutos);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_cadastrar);
-            this.Controls.Add(this.btn_novo);
-            this.Controls.Add(this.CB_categoria);
+            this.Controls.Add(this.textBoxCategoria);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_valor);
+            this.Controls.Add(this.textBoxValor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_descricao);
+            this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label1);
             this.Name = "frm_produtos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produtos";
             this.Load += new System.EventHandler(this.frm_produtos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -282,16 +341,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_descricao;
-        private System.Windows.Forms.TextBox txt_valor;
+        private System.Windows.Forms.TextBox textBoxNome;
+        private System.Windows.Forms.TextBox textBoxValor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox CB_categoria;
+        private System.Windows.Forms.TextBox textBoxCategoria;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_novo;
         private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.Button btn_excluir;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewProdutos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
@@ -302,5 +359,12 @@
         private System.Windows.Forms.ToolStripMenuItem itemVendas;
         private System.Windows.Forms.ToolStripMenuItem itemFaturamento;
         private System.Windows.Forms.ToolStripMenuItem itemEstoque;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxMarca;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePickerValidade;
+        private System.Windows.Forms.TextBox textBoxQuantidade;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_cancelar;
     }
 }
