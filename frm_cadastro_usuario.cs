@@ -26,5 +26,10 @@ namespace Projeto_Faculdade
         {
 
         }
+
+        private void frm_cadastro_usuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

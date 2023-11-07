@@ -12,6 +12,10 @@ namespace Projeto_Faculdade
 {
     public partial class frm_login : Form
     {
+        public frm_login()
+        {
+            InitializeComponent();
+        }
 
         private void bnt_entrar(object sender, EventArgs e)
         {
