@@ -33,7 +33,6 @@
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemVendas = new System.Windows.Forms.ToolStripMenuItem();
             this.itemFaturamento = new System.Windows.Forms.ToolStripMenuItem();
             this.itemEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_cad_produtos = new System.Windows.Forms.Button();
@@ -87,31 +86,23 @@
             // relatorioToolStripMenuItem
             // 
             this.relatorioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.itemVendas,
             this.itemFaturamento,
             this.itemEstoque});
             this.relatorioToolStripMenuItem.Name = "relatorioToolStripMenuItem";
             this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.relatorioToolStripMenuItem.Text = "Relatórios";
             // 
-            // itemVendas
-            // 
-            this.itemVendas.Name = "itemVendas";
-            this.itemVendas.Size = new System.Drawing.Size(142, 22);
-            this.itemVendas.Text = "Vendas";
-            this.itemVendas.Click += new System.EventHandler(this.bnt_vendas);
-            // 
             // itemFaturamento
             // 
             this.itemFaturamento.Name = "itemFaturamento";
-            this.itemFaturamento.Size = new System.Drawing.Size(142, 22);
+            this.itemFaturamento.Size = new System.Drawing.Size(180, 22);
             this.itemFaturamento.Text = "Faturamento";
             this.itemFaturamento.Click += new System.EventHandler(this.bnt_Faturamento);
             // 
             // itemEstoque
             // 
             this.itemEstoque.Name = "itemEstoque";
-            this.itemEstoque.Size = new System.Drawing.Size(142, 22);
+            this.itemEstoque.Size = new System.Drawing.Size(180, 22);
             this.itemEstoque.Text = "Estoque";
             this.itemEstoque.Click += new System.EventHandler(this.bnt_estoque);
             // 
@@ -337,7 +328,6 @@
         private System.Windows.Forms.Button btn_troca_usuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem relatorioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem itemVendas;
         private System.Windows.Forms.ToolStripMenuItem itemFaturamento;
         private System.Windows.Forms.ToolStripMenuItem itemEstoque;
     }
