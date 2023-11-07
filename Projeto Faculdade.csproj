@@ -108,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_cadastro_usuario.resx">
+      <DependentUpon>frm_cadastro_usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_encerrar.resx">
       <DependentUpon>frm_encerrar.cs</DependentUpon>
     </EmbeddedResource>

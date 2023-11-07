@@ -31,5 +31,19 @@ namespace Projeto_Faculdade
         {
 
         }
+
+        private void bnt_cadastro_user(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_cadastro_usuario frm = new frm_cadastro_usuario();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
     }
 }
