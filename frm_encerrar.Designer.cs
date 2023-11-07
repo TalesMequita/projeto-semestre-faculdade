@@ -82,7 +82,7 @@
             this.Controls.Add(this.button1);
             this.Name = "frm_encerrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Confirmação";
+            this.Text = "CONFIRMAR";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frm_alert_encerrar_Load);
             this.ResumeLayout(false);

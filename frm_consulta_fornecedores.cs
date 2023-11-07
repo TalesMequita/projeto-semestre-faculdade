@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Projeto_Faculdade
 {
-    public partial class frm_vendas : Form
+    public partial class frm_consulta_fornecedores : Form
     {
-        public frm_vendas()
+        public frm_consulta_fornecedores()
         {
             InitializeComponent();
+        }
+
+        private void frm_consulta_fornecedores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

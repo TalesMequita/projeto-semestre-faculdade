@@ -61,7 +61,7 @@ namespace Projeto_Faculdade
 
         private void bnt_relat_vendas(object sender, EventArgs e)
         {
-            frm_vendas frm = new frm_vendas();
+            frm_consulta_pedido frm = new frm_consulta_pedido();
 
             if (this.Visible)
             {

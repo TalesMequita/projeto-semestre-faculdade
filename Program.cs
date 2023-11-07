@@ -16,7 +16,7 @@ namespace Projeto_Faculdade
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_menu());
+            Application.Run(new frm_login());
         }
     }
 }

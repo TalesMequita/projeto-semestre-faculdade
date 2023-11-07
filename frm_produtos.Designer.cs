@@ -65,9 +65,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.Location = new System.Drawing.Point(15, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
+            this.label1.Text = "NOME:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxNome
@@ -93,14 +93,14 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.Location = new System.Drawing.Point(15, 254);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Valor";
+            this.label2.Text = "VALOR:";
             // 
             // textBoxCategoria
             // 
             this.textBoxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxCategoria.Location = new System.Drawing.Point(116, 152);
+            this.textBoxCategoria.Location = new System.Drawing.Point(129, 152);
             this.textBoxCategoria.Name = "textBoxCategoria";
             this.textBoxCategoria.Size = new System.Drawing.Size(277, 26);
             this.textBoxCategoria.TabIndex = 5;
@@ -112,19 +112,19 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.Location = new System.Drawing.Point(15, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Categoria";
+            this.label3.Text = "CATEGORIA:";
             // 
             // btn_cadastrar
             // 
             this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cadastrar.Location = new System.Drawing.Point(182, 332);
+            this.btn_cadastrar.Location = new System.Drawing.Point(160, 332);
             this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(88, 33);
+            this.btn_cadastrar.Size = new System.Drawing.Size(120, 33);
             this.btn_cadastrar.TabIndex = 7;
-            this.btn_cadastrar.Text = "Cadastrar";
+            this.btn_cadastrar.Text = "CADASTRAR";
             this.btn_cadastrar.UseVisualStyleBackColor = true;
             this.btn_cadastrar.Click += new System.EventHandler(this.bnt_cad_produto);
             // 
@@ -132,20 +132,20 @@
             // 
             this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_excluir.Location = new System.Drawing.Point(298, 332);
+            this.btn_excluir.Location = new System.Drawing.Point(286, 332);
             this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(69, 33);
+            this.btn_excluir.Size = new System.Drawing.Size(108, 33);
             this.btn_excluir.TabIndex = 8;
-            this.btn_excluir.Text = "Excluir";
+            this.btn_excluir.Text = "EXCLUIR";
             this.btn_excluir.UseVisualStyleBackColor = true;
             this.btn_excluir.Click += new System.EventHandler(this.bnt_excluir);
             // 
             // dataGridViewProdutos
             // 
             this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProdutos.Location = new System.Drawing.Point(12, 371);
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(19, 371);
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
-            this.dataGridViewProdutos.Size = new System.Drawing.Size(658, 161);
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(636, 161);
             this.dataGridViewProdutos.TabIndex = 10;
             // 
             // label4
@@ -153,7 +153,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label4.Location = new System.Drawing.Point(147, 38);
+            this.label4.Location = new System.Drawing.Point(154, 51);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(373, 31);
             this.label4.TabIndex = 12;
@@ -168,7 +168,7 @@
             this.relatorioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(686, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(678, 24);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -240,9 +240,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label5.Location = new System.Drawing.Point(15, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 15;
-            this.label5.Text = "Validade";
+            this.label5.Text = "VALIDADE:";
             // 
             // textBoxMarca
             // 
@@ -259,22 +259,22 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label6.Location = new System.Drawing.Point(15, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.Size = new System.Drawing.Size(71, 20);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Marca";
+            this.label6.Text = "MARCA:";
             // 
             // dateTimePickerValidade
             // 
             this.dateTimePickerValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dateTimePickerValidade.Location = new System.Drawing.Point(116, 184);
             this.dateTimePickerValidade.Name = "dateTimePickerValidade";
-            this.dateTimePickerValidade.Size = new System.Drawing.Size(277, 26);
+            this.dateTimePickerValidade.Size = new System.Drawing.Size(290, 26);
             this.dateTimePickerValidade.TabIndex = 19;
             // 
             // textBoxQuantidade
             // 
             this.textBoxQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxQuantidade.Location = new System.Drawing.Point(116, 280);
+            this.textBoxQuantidade.Location = new System.Drawing.Point(140, 280);
             this.textBoxQuantidade.Name = "textBoxQuantidade";
             this.textBoxQuantidade.Size = new System.Drawing.Size(100, 26);
             this.textBoxQuantidade.TabIndex = 21;
@@ -286,19 +286,19 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.Location = new System.Drawing.Point(15, 286);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 20);
+            this.label7.Size = new System.Drawing.Size(119, 20);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Quantidade";
+            this.label7.Text = "QUANTIDADE:";
             // 
             // btn_cancelar
             // 
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cancelar.Location = new System.Drawing.Point(390, 332);
+            this.btn_cancelar.Location = new System.Drawing.Point(400, 332);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(82, 33);
+            this.btn_cancelar.Size = new System.Drawing.Size(106, 33);
             this.btn_cancelar.TabIndex = 9;
-            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.Text = "CANCELAR";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.bnt_cancelar);
             // 
@@ -307,7 +307,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
-            this.ClientSize = new System.Drawing.Size(686, 544);
+            this.ClientSize = new System.Drawing.Size(678, 544);
             this.Controls.Add(this.textBoxQuantidade);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePickerValidade);
@@ -328,7 +328,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_produtos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Produtos";
+            this.Text = "CADASTRO DE PRODUTOS";
             this.Load += new System.EventHandler(this.frm_produtos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
