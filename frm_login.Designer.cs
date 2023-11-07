@@ -35,7 +35,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(93, 19);
+            this.label1.Location = new System.Drawing.Point(114, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 31);
             this.label1.TabIndex = 0;
@@ -46,7 +46,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(136, 72);
+            this.label2.Location = new System.Drawing.Point(169, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 20);
             this.label2.TabIndex = 1;
@@ -55,7 +55,7 @@
             // textBoxUsuario
             // 
             this.textBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxUsuario.Location = new System.Drawing.Point(125, 106);
+            this.textBoxUsuario.Location = new System.Drawing.Point(146, 114);
             this.textBoxUsuario.Multiline = true;
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(224, 25);
@@ -64,7 +64,7 @@
             // textBoxSenha
             // 
             this.textBoxSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxSenha.Location = new System.Drawing.Point(125, 137);
+            this.textBoxSenha.Location = new System.Drawing.Point(146, 145);
             this.textBoxSenha.Multiline = true;
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(224, 26);
@@ -73,7 +73,7 @@
             // buttonEntrar
             // 
             this.buttonEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonEntrar.Location = new System.Drawing.Point(167, 169);
+            this.buttonEntrar.Location = new System.Drawing.Point(195, 191);
             this.buttonEntrar.Name = "buttonEntrar";
             this.buttonEntrar.Size = new System.Drawing.Size(87, 29);
             this.buttonEntrar.TabIndex = 4;
@@ -88,42 +88,41 @@
             this.linkLabelCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.linkLabelCadastrar.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelCadastrar.Location = new System.Drawing.Point(122, 211);
+            this.linkLabelCadastrar.Location = new System.Drawing.Point(143, 234);
             this.linkLabelCadastrar.Name = "linkLabelCadastrar";
             this.linkLabelCadastrar.Size = new System.Drawing.Size(190, 17);
             this.linkLabelCadastrar.TabIndex = 6;
             this.linkLabelCadastrar.TabStop = true;
             this.linkLabelCadastrar.Text = "Não tem conta?Cadastrar-se";
-            this.linkLabelCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.bnt_cadastro_user);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(50, 111);
+            this.label3.Location = new System.Drawing.Point(71, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 20);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Usuário: ";
+            this.label3.Text = "SENHA:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(50, 143);
+            this.label4.Location = new System.Drawing.Point(56, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 20);
+            this.label4.Size = new System.Drawing.Size(84, 20);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Senha:";
+            this.label4.Text = "USUÁRIO";
             // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
-            this.ClientSize = new System.Drawing.Size(429, 270);
+            this.ClientSize = new System.Drawing.Size(454, 352);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabelCadastrar);
@@ -134,7 +133,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm";
+            this.Text = "LOGIN";
             this.Load += new System.EventHandler(this.frm_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

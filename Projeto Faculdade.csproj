@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="frm_encerrar.Designer.cs">
       <DependentUpon>frm_encerrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_fornecedor.Designer.cs">
+      <DependentUpon>frm_fornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
@@ -94,11 +101,11 @@
     <Compile Include="frm_produtos.Designer.cs">
       <DependentUpon>frm_produtos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_vendas.cs">
+    <Compile Include="frm_relatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_vendas.Designer.cs">
-      <DependentUpon>frm_vendas.cs</DependentUpon>
+    <Compile Include="frm_relatorio.Designer.cs">
+      <DependentUpon>frm_relatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_caixa.cs">
       <SubType>Form</SubType>
@@ -113,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_encerrar.resx">
       <DependentUpon>frm_encerrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_faturamento.resx">
+      <DependentUpon>frm_faturamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_fornecedor.resx">
+      <DependentUpon>frm_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
@@ -131,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_produtos.resx">
       <DependentUpon>frm_produtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_relatorio.resx">
+      <DependentUpon>frm_relatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

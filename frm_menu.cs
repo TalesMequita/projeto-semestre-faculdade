@@ -80,16 +80,7 @@ namespace Projeto_Faculdade
 
         private void btn_vendas_Click(object sender, EventArgs e)
         {
-            frm_vendas frm = new frm_vendas();
 
-            if (this.Visible)
-            {
-                this.Hide();
-            }
-
-            frm.ShowDialog();
-
-            this.Close();
         }
 
         private void btn_caixa_Click(object sender, EventArgs e)
@@ -143,7 +134,7 @@ namespace Projeto_Faculdade
 
         private void bnt_vendas(object sender, EventArgs e)
         {
-            frm_vendas frm = new frm_vendas();
+            frm_consulta_pedido frm = new frm_consulta_pedido();
 
             if (this.Visible)
             {
@@ -200,6 +191,32 @@ namespace Projeto_Faculdade
             frm.ShowDialog();
             this.Close();
 
+        }
+
+        private void bnt_fornecedor(object sender, EventArgs e)
+        {
+            frm_fornecedor frm = new frm_fornecedor();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_pedidos(object sender, EventArgs e)
+        {
+            frm_consulta_pedido frm = new frm_consulta_pedido();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -32,7 +32,6 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
-            this.btn_novo = new System.Windows.Forms.Button();
             this.txt_categoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemVendas = new System.Windows.Forms.ToolStripMenuItem();
             this.itemFaturamento = new System.Windows.Forms.ToolStripMenuItem();
             this.itemEstoque = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +60,7 @@
             // 
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cancelar.Location = new System.Drawing.Point(392, 148);
+            this.btn_cancelar.Location = new System.Drawing.Point(344, 149);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(96, 37);
             this.btn_cancelar.TabIndex = 20;
@@ -71,7 +71,7 @@
             // 
             this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_excluir.Location = new System.Drawing.Point(290, 148);
+            this.btn_excluir.Location = new System.Drawing.Point(242, 149);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(96, 37);
             this.btn_excluir.TabIndex = 19;
@@ -82,28 +82,17 @@
             // 
             this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cadastrar.Location = new System.Drawing.Point(188, 148);
+            this.btn_cadastrar.Location = new System.Drawing.Point(140, 149);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(96, 37);
             this.btn_cadastrar.TabIndex = 18;
             this.btn_cadastrar.Text = "Cadastrar";
             this.btn_cadastrar.UseVisualStyleBackColor = true;
             // 
-            // btn_novo
-            // 
-            this.btn_novo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_novo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_novo.Location = new System.Drawing.Point(86, 148);
-            this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(96, 37);
-            this.btn_novo.TabIndex = 17;
-            this.btn_novo.Text = "Novo";
-            this.btn_novo.UseVisualStyleBackColor = true;
-            // 
             // txt_categoria
             // 
             this.txt_categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_categoria.Location = new System.Drawing.Point(179, 100);
+            this.txt_categoria.Location = new System.Drawing.Point(195, 101);
             this.txt_categoria.Name = "txt_categoria";
             this.txt_categoria.Size = new System.Drawing.Size(297, 26);
             this.txt_categoria.TabIndex = 12;
@@ -115,11 +104,11 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(95, 106);
+            this.label1.Location = new System.Drawing.Point(81, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Categoria";
+            this.label1.Text = "CATEGORIA:";
             // 
             // label2
             // 
@@ -180,23 +169,31 @@
             // relatorioToolStripMenuItem
             // 
             this.relatorioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemVendas,
             this.itemFaturamento,
             this.itemEstoque});
             this.relatorioToolStripMenuItem.Name = "relatorioToolStripMenuItem";
             this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.relatorioToolStripMenuItem.Text = "Relatórios";
             // 
+            // itemVendas
+            // 
+            this.itemVendas.Name = "itemVendas";
+            this.itemVendas.Size = new System.Drawing.Size(142, 22);
+            this.itemVendas.Text = "Vendas";
+            this.itemVendas.Click += new System.EventHandler(this.bnt_relat_vendas);
+            // 
             // itemFaturamento
             // 
             this.itemFaturamento.Name = "itemFaturamento";
-            this.itemFaturamento.Size = new System.Drawing.Size(180, 22);
+            this.itemFaturamento.Size = new System.Drawing.Size(142, 22);
             this.itemFaturamento.Text = "Faturamento";
             this.itemFaturamento.Click += new System.EventHandler(this.bnt_relat_faturamento);
             // 
             // itemEstoque
             // 
             this.itemEstoque.Name = "itemEstoque";
-            this.itemEstoque.Size = new System.Drawing.Size(180, 22);
+            this.itemEstoque.Size = new System.Drawing.Size(142, 22);
             this.itemEstoque.Text = "Estoque";
             this.itemEstoque.Click += new System.EventHandler(this.bnt_relat_estoque);
             // 
@@ -212,12 +209,11 @@
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_cadastrar);
-            this.Controls.Add(this.btn_novo);
             this.Controls.Add(this.txt_categoria);
             this.Controls.Add(this.label1);
             this.Name = "frm_categorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Categorias";
+            this.Text = "CADASTRO DE CATEGORIAS";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -232,7 +228,6 @@
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Button btn_cadastrar;
-        private System.Windows.Forms.Button btn_novo;
         private System.Windows.Forms.TextBox txt_categoria;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -242,6 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatorioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itemVendas;
         private System.Windows.Forms.ToolStripMenuItem itemFaturamento;
         private System.Windows.Forms.ToolStripMenuItem itemEstoque;
     }

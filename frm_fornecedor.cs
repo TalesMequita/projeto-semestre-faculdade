@@ -10,26 +10,24 @@ using System.Windows.Forms;
 
 namespace Projeto_Faculdade
 {
-    public partial class frm_login : Form
+    public partial class frm_fornecedor : Form
     {
-
-        private void bnt_entrar(object sender, EventArgs e)
+        public frm_fornecedor()
         {
-            frm_menu frm = new frm_menu();
-            
+            InitializeComponent();
+        }
+
+        private void bnt_consultar(object sender, EventArgs e)
+        {
+            frm_consulta_fornecedores frm = new frm_consulta_fornecedores();
+
             if (this.Visible)
             {
                 this.Hide();
             }
 
             frm.ShowDialog();
-
             this.Close();
-        }
-
-        private void frm_login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
