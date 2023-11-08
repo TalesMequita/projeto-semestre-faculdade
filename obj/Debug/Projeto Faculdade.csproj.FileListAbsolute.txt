@@ -1,0 +1,17 @@
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.csproj.AssemblyReference.cache
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_encerrar.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_login.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_caixa.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_categorias.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_menu.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_estoque.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_produtos.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.Properties.Resources.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.csproj.GenerateResource.cache
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.csproj.CoreCompileInputs.cache
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\bin\Debug\Projeto Faculdade.exe.config
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\bin\Debug\Projeto Faculdade.exe
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\bin\Debug\Projeto Faculdade.pdb
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.exe
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.pdb
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_cadastro_usuario.resources
