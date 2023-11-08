@@ -193,6 +193,7 @@ namespace Projeto_Faculdade
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(99, 20);
             this.toolStripMenuItem1.Text = "Menu Principal";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // cadastroToolStripMenuItem
             // 
@@ -206,14 +207,16 @@ namespace Projeto_Faculdade
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
             // relatorioToolStripMenuItem
             // 
@@ -228,20 +231,23 @@ namespace Projeto_Faculdade
             // itemVendas
             // 
             this.itemVendas.Name = "itemVendas";
-            this.itemVendas.Size = new System.Drawing.Size(142, 22);
+            this.itemVendas.Size = new System.Drawing.Size(180, 22);
             this.itemVendas.Text = "Vendas";
+            this.itemVendas.Click += new System.EventHandler(this.itemVendas_Click);
             // 
             // itemFaturamento
             // 
             this.itemFaturamento.Name = "itemFaturamento";
-            this.itemFaturamento.Size = new System.Drawing.Size(142, 22);
+            this.itemFaturamento.Size = new System.Drawing.Size(180, 22);
             this.itemFaturamento.Text = "Faturamento";
+            this.itemFaturamento.Click += new System.EventHandler(this.itemFaturamento_Click);
             // 
             // itemEstoque
             // 
             this.itemEstoque.Name = "itemEstoque";
-            this.itemEstoque.Size = new System.Drawing.Size(142, 22);
+            this.itemEstoque.Size = new System.Drawing.Size(180, 22);
             this.itemEstoque.Text = "Estoque";
+            this.itemEstoque.Click += new System.EventHandler(this.itemEstoque_Click);
             // 
             // button1
             // 
