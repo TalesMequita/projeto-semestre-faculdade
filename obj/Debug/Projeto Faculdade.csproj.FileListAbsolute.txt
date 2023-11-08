@@ -15,3 +15,24 @@ C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestr
 C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.exe
 C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.pdb
 C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_cadastro_usuario.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\bin\Debug\Projeto Faculdade.exe.config
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\bin\Debug\Projeto Faculdade.exe
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\bin\Debug\Projeto Faculdade.pdb
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.csproj.AssemblyReference.cache
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_cadastro_usuario.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_consulta_fornecedores.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_consulta_pedido.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_encerrar.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_faturamento.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_fornecedor.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_login.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_caixa.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_categorias.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_menu.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_estoque.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_produtos.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.Properties.Resources.resources
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.csproj.GenerateResource.cache
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.csproj.CoreCompileInputs.cache
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.exe
+C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.pdb
