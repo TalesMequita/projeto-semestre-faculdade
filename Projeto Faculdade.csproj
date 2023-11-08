@@ -53,6 +53,18 @@
     <Compile Include="frm_cadastro_usuario.Designer.cs">
       <DependentUpon>frm_cadastro_usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_consulta_fornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consulta_fornecedores.Designer.cs">
+      <DependentUpon>frm_consulta_fornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_consulta_pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consulta_pedido.Designer.cs">
+      <DependentUpon>frm_consulta_pedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_encerrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,12 +113,6 @@
     <Compile Include="frm_produtos.Designer.cs">
       <DependentUpon>frm_produtos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_relatorio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_relatorio.Designer.cs">
-      <DependentUpon>frm_relatorio.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_caixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_cadastro_usuario.resx">
       <DependentUpon>frm_cadastro_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consulta_fornecedores.resx">
+      <DependentUpon>frm_consulta_fornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consulta_pedido.resx">
+      <DependentUpon>frm_consulta_pedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_encerrar.resx">
       <DependentUpon>frm_encerrar.cs</DependentUpon>
@@ -144,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_produtos.resx">
       <DependentUpon>frm_produtos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_relatorio.resx">
-      <DependentUpon>frm_relatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
