@@ -67,7 +67,6 @@
             this.label1.Size = new System.Drawing.Size(151, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "NOME COMPLETO:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -101,7 +100,6 @@
             this.label4.Size = new System.Drawing.Size(168, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "PERFIL DE ACESSO:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -145,6 +143,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "CADASTRAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.bnt_cadastrar);
             // 
             // textBox1
             // 
@@ -348,6 +347,7 @@
             this.Name = "frm_cadastro_usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRO DE FUNCIONARIO";
+            this.Load += new System.EventHandler(this.frm_cadastro_usuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

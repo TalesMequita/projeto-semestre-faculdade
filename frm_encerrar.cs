@@ -28,11 +28,6 @@ namespace Projeto_Faculdade
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frm_alert_encerrar_Load(object sender, EventArgs e)
         {
 

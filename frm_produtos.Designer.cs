@@ -68,7 +68,6 @@
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "NOME:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxNome
             // 
@@ -329,7 +328,6 @@
             this.Name = "frm_produtos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRO DE PRODUTOS";
-            this.Load += new System.EventHandler(this.frm_produtos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

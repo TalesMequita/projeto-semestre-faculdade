@@ -174,11 +174,6 @@ namespace Projeto_Faculdade
             this.Close();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void btn_troca_user(object sender, EventArgs e)
         {
             frm_login frm = new frm_login();

@@ -17,16 +17,6 @@ namespace Projeto_Faculdade
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frm_produtos_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         private void bnt_menu_principal(object sender, EventArgs e)

@@ -17,14 +17,22 @@ namespace Projeto_Faculdade
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void frm_cadastro_usuario_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void bnt_cadastrar(object sender, EventArgs e)
         {
+            frm_menu frm = new frm_menu();
 
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -17,8 +17,6 @@ namespace Projeto_Faculdade
             InitializeComponent();
         }
 
-  
-
         private void bnt_menu_principal(object sender, EventArgs e)
         {
             frm_menu frm = new frm_menu();
