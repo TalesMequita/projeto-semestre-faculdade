@@ -156,15 +156,15 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(172, 105);
+            this.textBox2.Location = new System.Drawing.Point(180, 105);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(376, 26);
+            this.textBox2.Size = new System.Drawing.Size(368, 26);
             this.textBox2.TabIndex = 14;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(172, 137);
+            this.textBox3.Location = new System.Drawing.Point(180, 137);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(181, 26);
             this.textBox3.TabIndex = 15;
@@ -221,7 +221,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(295, 265);
+            this.textBox4.Location = new System.Drawing.Point(318, 265);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 26);
             this.textBox4.TabIndex = 27;
@@ -240,7 +240,7 @@
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox9.Location = new System.Drawing.Point(172, 169);
+            this.textBox9.Location = new System.Drawing.Point(180, 172);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(181, 26);
             this.textBox9.TabIndex = 30;
@@ -267,7 +267,7 @@
             // maskedTextBox3
             // 
             this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.maskedTextBox3.Location = new System.Drawing.Point(623, 108);
+            this.maskedTextBox3.Location = new System.Drawing.Point(678, 108);
             this.maskedTextBox3.Mask = "00000-999";
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(121, 26);
@@ -297,7 +297,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(295, 297);
+            this.textBox5.Location = new System.Drawing.Point(318, 297);
             this.textBox5.Name = "textBox5";
             this.textBox5.PasswordChar = '*';
             this.textBox5.Size = new System.Drawing.Size(121, 26);

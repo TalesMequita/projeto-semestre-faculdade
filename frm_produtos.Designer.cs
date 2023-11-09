@@ -72,15 +72,15 @@
             // textBoxNome
             // 
             this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxNome.Location = new System.Drawing.Point(116, 120);
+            this.textBoxNome.Location = new System.Drawing.Point(140, 120);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(449, 26);
+            this.textBoxNome.Size = new System.Drawing.Size(436, 26);
             this.textBoxNome.TabIndex = 1;
             // 
             // textBoxValor
             // 
             this.textBoxValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxValor.Location = new System.Drawing.Point(116, 248);
+            this.textBoxValor.Location = new System.Drawing.Point(140, 248);
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(154, 26);
             this.textBoxValor.TabIndex = 3;
@@ -99,9 +99,9 @@
             // textBoxCategoria
             // 
             this.textBoxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxCategoria.Location = new System.Drawing.Point(129, 152);
+            this.textBoxCategoria.Location = new System.Drawing.Point(140, 152);
             this.textBoxCategoria.Name = "textBoxCategoria";
-            this.textBoxCategoria.Size = new System.Drawing.Size(277, 26);
+            this.textBoxCategoria.Size = new System.Drawing.Size(308, 26);
             this.textBoxCategoria.TabIndex = 5;
             // 
             // label3
@@ -246,9 +246,9 @@
             // textBoxMarca
             // 
             this.textBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxMarca.Location = new System.Drawing.Point(116, 216);
+            this.textBoxMarca.Location = new System.Drawing.Point(140, 216);
             this.textBoxMarca.Name = "textBoxMarca";
-            this.textBoxMarca.Size = new System.Drawing.Size(222, 26);
+            this.textBoxMarca.Size = new System.Drawing.Size(154, 26);
             this.textBoxMarca.TabIndex = 18;
             // 
             // label6
@@ -265,9 +265,9 @@
             // dateTimePickerValidade
             // 
             this.dateTimePickerValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePickerValidade.Location = new System.Drawing.Point(116, 184);
+            this.dateTimePickerValidade.Location = new System.Drawing.Point(140, 184);
             this.dateTimePickerValidade.Name = "dateTimePickerValidade";
-            this.dateTimePickerValidade.Size = new System.Drawing.Size(290, 26);
+            this.dateTimePickerValidade.Size = new System.Drawing.Size(308, 26);
             this.dateTimePickerValidade.TabIndex = 19;
             // 
             // textBoxQuantidade
@@ -275,7 +275,7 @@
             this.textBoxQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxQuantidade.Location = new System.Drawing.Point(140, 280);
             this.textBoxQuantidade.Name = "textBoxQuantidade";
-            this.textBoxQuantidade.Size = new System.Drawing.Size(100, 26);
+            this.textBoxQuantidade.Size = new System.Drawing.Size(154, 26);
             this.textBoxQuantidade.TabIndex = 21;
             // 
             // label7
