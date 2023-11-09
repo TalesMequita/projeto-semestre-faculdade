@@ -36,3 +36,7 @@ C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debu
 C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.csproj.CoreCompileInputs.cache
 C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.exe
 C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.pdb
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_consulta_fornecedores.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_consulta_pedido.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_faturamento.resources
+C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_fornecedor.resources
