@@ -32,7 +32,6 @@
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxValor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxCategoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
@@ -56,6 +55,10 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+<<<<<<< Updated upstream
+=======
+            this.listBox1 = new System.Windows.Forms.ListBox();
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +85,11 @@
             // textBoxValor
             // 
             this.textBoxValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.textBoxValor.Location = new System.Drawing.Point(141, 222);
+=======
+            this.textBoxValor.Location = new System.Drawing.Point(141, 191);
+>>>>>>> Stashed changes
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(154, 26);
             this.textBoxValor.TabIndex = 3;
@@ -92,12 +99,17 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.label2.Location = new System.Drawing.Point(16, 228);
+=======
+            this.label2.Location = new System.Drawing.Point(16, 197);
+>>>>>>> Stashed changes
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "VALOR:";
             // 
+<<<<<<< Updated upstream
             // textBoxCategoria
             // 
             this.textBoxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -106,16 +118,22 @@
             this.textBoxCategoria.Size = new System.Drawing.Size(308, 26);
             this.textBoxCategoria.TabIndex = 5;
             // 
+=======
+>>>>>>> Stashed changes
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.label3.Location = new System.Drawing.Point(16, 132);
+=======
+            this.label3.Location = new System.Drawing.Point(473, 133);
+>>>>>>> Stashed changes
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 20);
+            this.label3.Size = new System.Drawing.Size(104, 20);
             this.label3.TabIndex = 4;
-            this.label3.Text = "CATEGORIA:";
+            this.label3.Text = "CATEGORIA";
             // 
             // btn_cadastrar
             // 
@@ -239,7 +257,11 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.label5.Location = new System.Drawing.Point(16, 164);
+=======
+            this.label5.Location = new System.Drawing.Point(16, 133);
+>>>>>>> Stashed changes
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 15;
@@ -248,7 +270,11 @@
             // textBoxMarca
             // 
             this.textBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.textBoxMarca.Location = new System.Drawing.Point(141, 190);
+=======
+            this.textBoxMarca.Location = new System.Drawing.Point(141, 159);
+>>>>>>> Stashed changes
             this.textBoxMarca.Name = "textBoxMarca";
             this.textBoxMarca.Size = new System.Drawing.Size(154, 26);
             this.textBoxMarca.TabIndex = 18;
@@ -258,7 +284,11 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.label6.Location = new System.Drawing.Point(16, 196);
+=======
+            this.label6.Location = new System.Drawing.Point(16, 165);
+>>>>>>> Stashed changes
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 17;
@@ -267,7 +297,11 @@
             // dateTimePickerValidade
             // 
             this.dateTimePickerValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.dateTimePickerValidade.Location = new System.Drawing.Point(141, 158);
+=======
+            this.dateTimePickerValidade.Location = new System.Drawing.Point(141, 127);
+>>>>>>> Stashed changes
             this.dateTimePickerValidade.Name = "dateTimePickerValidade";
             this.dateTimePickerValidade.Size = new System.Drawing.Size(308, 26);
             this.dateTimePickerValidade.TabIndex = 19;
@@ -275,7 +309,11 @@
             // textBoxQuantidade
             // 
             this.textBoxQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.textBoxQuantidade.Location = new System.Drawing.Point(141, 254);
+=======
+            this.textBoxQuantidade.Location = new System.Drawing.Point(141, 223);
+>>>>>>> Stashed changes
             this.textBoxQuantidade.Name = "textBoxQuantidade";
             this.textBoxQuantidade.Size = new System.Drawing.Size(154, 26);
             this.textBoxQuantidade.TabIndex = 21;
@@ -285,7 +323,11 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.label7.Location = new System.Drawing.Point(16, 260);
+=======
+            this.label7.Location = new System.Drawing.Point(16, 229);
+>>>>>>> Stashed changes
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 20);
             this.label7.TabIndex = 20;
@@ -306,7 +348,11 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.textBox1.Location = new System.Drawing.Point(141, 287);
+=======
+            this.textBox1.Location = new System.Drawing.Point(141, 256);
+>>>>>>> Stashed changes
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(154, 26);
             this.textBox1.TabIndex = 23;
@@ -316,18 +362,39 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<<<<<<< Updated upstream
             this.label8.Location = new System.Drawing.Point(16, 290);
+=======
+            this.label8.Location = new System.Drawing.Point(16, 259);
+>>>>>>> Stashed changes
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(115, 20);
             this.label8.TabIndex = 22;
             this.label8.Text = "FONECEDOR:";
             // 
+<<<<<<< Updated upstream
+=======
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(445, 159);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(200, 124);
+            this.listBox1.TabIndex = 24;
+            // 
+>>>>>>> Stashed changes
             // frm_produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(678, 544);
+<<<<<<< Updated upstream
+=======
+            this.Controls.Add(this.listBox1);
+>>>>>>> Stashed changes
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBoxQuantidade);
@@ -342,7 +409,6 @@
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_cadastrar);
-            this.Controls.Add(this.textBoxCategoria);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxValor);
             this.Controls.Add(this.label2);
@@ -365,7 +431,6 @@
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.TextBox textBoxValor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxCategoria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.Button btn_excluir;
@@ -389,5 +454,9 @@
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.ListBox listBox1;
+>>>>>>> Stashed changes
     }
 }

@@ -123,7 +123,7 @@ namespace Projeto_Faculdade
         {
             // Pegando os valores inseridos:
             string nome = textBoxNome.Text;
-            string categoria = textBoxCategoria.Text;
+            // Inserir aqui o recebimento da seleção de categoria com base nas categorias cadastradas no banco de dados.
             string marca = textBoxMarca.Text;
             string valor = textBoxValor.Text;
             string quantidade = textBoxQuantidade.Text;
@@ -135,7 +135,7 @@ namespace Projeto_Faculdade
                 Nome = nome,
                 Valor = valor,
                 Quantidade = quantidade,
-                Categoria = categoria,
+                // Inserir aqui o recebimento da categoria com base nas categorias cadastradas no banco de dados.
                 Marca = marca,
                 Validade = validade
             };
@@ -151,7 +151,6 @@ namespace Projeto_Faculdade
         private void bnt_cancelar(object sender, EventArgs e)
         {
             textBoxNome.Clear();
-            textBoxCategoria.Clear();
             textBoxMarca.Clear();
             textBoxValor.Clear();
             textBoxQuantidade.Clear();
@@ -181,6 +180,11 @@ namespace Projeto_Faculdade
                 // Mensagem caso a pessoa não tenha clicado em nenhuma linha
                 MessageBox.Show("Selecione um produto para excluir");
             }
+        }
+
+        private void frm_produtos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
