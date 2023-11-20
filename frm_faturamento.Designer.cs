@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +78,6 @@
             this.label1.Size = new System.Drawing.Size(265, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Orçamento e vendas";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // menuStrip1
             // 
@@ -98,6 +97,7 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(99, 20);
             this.toolStripMenuItem1.Text = "Menu Principal";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.bnt_menu_principal);
             // 
             // cadastroToolStripMenuItem
             // 
@@ -111,14 +111,16 @@
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.bnt_cad_produto);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.bnt_cad_categoria);
             // 
             // relatorioToolStripMenuItem
             // 
@@ -133,20 +135,23 @@
             // itemVendas
             // 
             this.itemVendas.Name = "itemVendas";
-            this.itemVendas.Size = new System.Drawing.Size(142, 22);
+            this.itemVendas.Size = new System.Drawing.Size(180, 22);
             this.itemVendas.Text = "Vendas";
+            this.itemVendas.Click += new System.EventHandler(this.bnt_relat_vendas);
             // 
             // itemFaturamento
             // 
             this.itemFaturamento.Name = "itemFaturamento";
-            this.itemFaturamento.Size = new System.Drawing.Size(142, 22);
+            this.itemFaturamento.Size = new System.Drawing.Size(180, 22);
             this.itemFaturamento.Text = "Faturamento";
+            this.itemFaturamento.Click += new System.EventHandler(this.bnt_relat_faturamento);
             // 
             // itemEstoque
             // 
             this.itemEstoque.Name = "itemEstoque";
-            this.itemEstoque.Size = new System.Drawing.Size(142, 22);
+            this.itemEstoque.Size = new System.Drawing.Size(180, 22);
             this.itemEstoque.Text = "Estoque";
+            this.itemEstoque.Click += new System.EventHandler(this.bnt_relat_estoque);
             // 
             // dateTimePicker2
             // 
@@ -180,38 +185,38 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(38, 249);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series5.Color = System.Drawing.Color.Lime;
-            series5.IsXValueIndexed = true;
-            series5.LabelForeColor = System.Drawing.Color.Lime;
-            series5.Legend = "Legend1";
-            series5.Name = "LUCRO";
-            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Color = System.Drawing.Color.Red;
-            series6.Legend = "Legend1";
-            series6.Name = "GASTO";
-            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            this.chart1.Series.Add(series5);
-            this.chart1.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series1.Color = System.Drawing.Color.Lime;
+            series1.IsXValueIndexed = true;
+            series1.LabelForeColor = System.Drawing.Color.Lime;
+            series1.Legend = "Legend1";
+            series1.Name = "LUCRO";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Red;
+            series2.Legend = "Legend1";
+            series2.Name = "GASTO";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(494, 275);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart1";
-            title5.Name = "data_inicio";
-            title5.Text = "INICIO";
-            title6.Name = "data_fim";
-            title6.Text = "FIM";
-            this.chart1.Titles.Add(title5);
-            this.chart1.Titles.Add(title6);
+            title1.Name = "data_inicio";
+            title1.Text = "INICIO";
+            title2.Name = "data_fim";
+            title2.Text = "FIM";
+            this.chart1.Titles.Add(title1);
+            this.chart1.Titles.Add(title2);
             // 
             // label2
             // 
@@ -342,7 +347,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label8.Location = new System.Drawing.Point(638, 97);
+            this.label8.Location = new System.Drawing.Point(620, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(193, 20);
             this.label8.TabIndex = 52;

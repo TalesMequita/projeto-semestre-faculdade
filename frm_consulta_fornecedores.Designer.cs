@@ -225,6 +225,7 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(99, 20);
             this.toolStripMenuItem1.Text = "Menu Principal";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.bnt_menu_principal);
             // 
             // cadastroToolStripMenuItem
             // 
@@ -238,14 +239,16 @@
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.bnt_cad_produto);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.bnt_cad_categoria);
             // 
             // relatorioToolStripMenuItem
             // 
@@ -260,20 +263,23 @@
             // itemVendas
             // 
             this.itemVendas.Name = "itemVendas";
-            this.itemVendas.Size = new System.Drawing.Size(142, 22);
+            this.itemVendas.Size = new System.Drawing.Size(180, 22);
             this.itemVendas.Text = "Vendas";
+            this.itemVendas.Click += new System.EventHandler(this.bnt_relat_vendas);
             // 
             // itemFaturamento
             // 
             this.itemFaturamento.Name = "itemFaturamento";
-            this.itemFaturamento.Size = new System.Drawing.Size(142, 22);
+            this.itemFaturamento.Size = new System.Drawing.Size(180, 22);
             this.itemFaturamento.Text = "Faturamento";
+            this.itemFaturamento.Click += new System.EventHandler(this.bnt_relat_faturamento);
             // 
             // itemEstoque
             // 
             this.itemEstoque.Name = "itemEstoque";
-            this.itemEstoque.Size = new System.Drawing.Size(142, 22);
+            this.itemEstoque.Size = new System.Drawing.Size(180, 22);
             this.itemEstoque.Text = "Estoque";
+            this.itemEstoque.Click += new System.EventHandler(this.bnt_relat_estoque);
             // 
             // frm_consulta_fornecedores
             // 

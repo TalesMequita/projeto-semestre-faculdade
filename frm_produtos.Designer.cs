@@ -32,7 +32,6 @@
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxValor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxCategoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
@@ -54,6 +53,9 @@
             this.textBoxQuantidade = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_cancelar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,25 +65,24 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(15, 126);
+            this.label1.Location = new System.Drawing.Point(16, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "NOME:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxNome
             // 
             this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxNome.Location = new System.Drawing.Point(116, 120);
+            this.textBoxNome.Location = new System.Drawing.Point(141, 94);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(449, 26);
+            this.textBoxNome.Size = new System.Drawing.Size(436, 26);
             this.textBoxNome.TabIndex = 1;
             // 
             // textBoxValor
             // 
             this.textBoxValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxValor.Location = new System.Drawing.Point(116, 248);
+            this.textBoxValor.Location = new System.Drawing.Point(141, 191);
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(154, 26);
             this.textBoxValor.TabIndex = 3;
@@ -91,30 +92,22 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(15, 254);
+            this.label2.Location = new System.Drawing.Point(16, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "VALOR:";
-            // 
-            // textBoxCategoria
-            // 
-            this.textBoxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxCategoria.Location = new System.Drawing.Point(129, 152);
-            this.textBoxCategoria.Name = "textBoxCategoria";
-            this.textBoxCategoria.Size = new System.Drawing.Size(277, 26);
-            this.textBoxCategoria.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(15, 158);
+            this.label3.Location = new System.Drawing.Point(473, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 20);
+            this.label3.Size = new System.Drawing.Size(104, 20);
             this.label3.TabIndex = 4;
-            this.label3.Text = "CATEGORIA:";
+            this.label3.Text = "CATEGORIA";
             // 
             // btn_cadastrar
             // 
@@ -238,7 +231,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(15, 190);
+            this.label5.Location = new System.Drawing.Point(16, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 15;
@@ -247,9 +240,9 @@
             // textBoxMarca
             // 
             this.textBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxMarca.Location = new System.Drawing.Point(116, 216);
+            this.textBoxMarca.Location = new System.Drawing.Point(141, 159);
             this.textBoxMarca.Name = "textBoxMarca";
-            this.textBoxMarca.Size = new System.Drawing.Size(222, 26);
+            this.textBoxMarca.Size = new System.Drawing.Size(154, 26);
             this.textBoxMarca.TabIndex = 18;
             // 
             // label6
@@ -257,26 +250,26 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(15, 222);
+            this.label6.Location = new System.Drawing.Point(16, 165);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 17;
-            this.label6.Text = "MARCA:";
+            this.label6.Text = "CUSTO:";
             // 
             // dateTimePickerValidade
             // 
             this.dateTimePickerValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePickerValidade.Location = new System.Drawing.Point(116, 184);
+            this.dateTimePickerValidade.Location = new System.Drawing.Point(141, 127);
             this.dateTimePickerValidade.Name = "dateTimePickerValidade";
-            this.dateTimePickerValidade.Size = new System.Drawing.Size(290, 26);
+            this.dateTimePickerValidade.Size = new System.Drawing.Size(308, 26);
             this.dateTimePickerValidade.TabIndex = 19;
             // 
             // textBoxQuantidade
             // 
             this.textBoxQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxQuantidade.Location = new System.Drawing.Point(140, 280);
+            this.textBoxQuantidade.Location = new System.Drawing.Point(141, 223);
             this.textBoxQuantidade.Name = "textBoxQuantidade";
-            this.textBoxQuantidade.Size = new System.Drawing.Size(100, 26);
+            this.textBoxQuantidade.Size = new System.Drawing.Size(154, 26);
             this.textBoxQuantidade.TabIndex = 21;
             // 
             // label7
@@ -284,7 +277,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label7.Location = new System.Drawing.Point(15, 286);
+            this.label7.Location = new System.Drawing.Point(16, 229);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 20);
             this.label7.TabIndex = 20;
@@ -302,12 +295,44 @@
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.bnt_cancelar);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.Location = new System.Drawing.Point(141, 256);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(154, 26);
+            this.textBox1.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label8.Location = new System.Drawing.Point(16, 259);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 20);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "FONECEDOR:";
+            // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(445, 159);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(200, 124);
+            this.listBox1.TabIndex = 24;
+            // 
             // frm_produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(678, 544);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.textBoxQuantidade);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePickerValidade);
@@ -320,7 +345,6 @@
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_cadastrar);
-            this.Controls.Add(this.textBoxCategoria);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxValor);
             this.Controls.Add(this.label2);
@@ -344,7 +368,6 @@
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.TextBox textBoxValor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxCategoria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.Button btn_excluir;
@@ -366,5 +389,8 @@
         private System.Windows.Forms.TextBox textBoxQuantidade;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
