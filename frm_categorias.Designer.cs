@@ -77,6 +77,7 @@
             this.btn_excluir.TabIndex = 19;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // btn_cadastrar
             // 
@@ -88,6 +89,7 @@
             this.btn_cadastrar.TabIndex = 18;
             this.btn_cadastrar.Text = "Cadastrar";
             this.btn_cadastrar.UseVisualStyleBackColor = true;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
             // 
             // txt_categoria
             // 
