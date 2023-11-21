@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.txt_categoria = new System.Windows.Forms.TextBox();
@@ -44,6 +44,8 @@
             this.itemVendas = new System.Windows.Forms.ToolStripMenuItem();
             this.itemFaturamento = new System.Windows.Forms.ToolStripMenuItem();
             this.itemEstoque = new System.Windows.Forms.ToolStripMenuItem();
+            this.ID_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,21 +53,26 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 206);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_categoria,
+            this.Nome});
+            this.dataGridView1.Location = new System.Drawing.Point(47, 219);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(531, 160);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(493, 160);
             this.dataGridView1.TabIndex = 21;
             // 
-            // btn_cancelar
+            // btn_buscar
             // 
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cancelar.Location = new System.Drawing.Point(344, 149);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(96, 37);
-            this.btn_cancelar.TabIndex = 20;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_buscar.Location = new System.Drawing.Point(344, 149);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(96, 37);
+            this.btn_buscar.TabIndex = 20;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_excluir
             // 
@@ -76,7 +83,6 @@
             this.btn_excluir.Size = new System.Drawing.Size(96, 37);
             this.btn_excluir.TabIndex = 19;
             this.btn_excluir.Text = "Excluir";
-            this.btn_excluir.UseVisualStyleBackColor = true;
             this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // btn_cadastrar
@@ -199,6 +205,19 @@
             this.itemEstoque.Text = "Estoque";
             this.itemEstoque.Click += new System.EventHandler(this.bnt_relat_estoque);
             // 
+            // ID_categoria
+            // 
+            this.ID_categoria.HeaderText = "ID_categoria";
+            this.ID_categoria.Name = "ID_categoria";
+            this.ID_categoria.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 350;
+            // 
             // frm_categorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,7 +227,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_cancelar);
+            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_cadastrar);
             this.Controls.Add(this.txt_categoria);
@@ -227,7 +246,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.TextBox txt_categoria;
@@ -242,5 +261,7 @@
         private System.Windows.Forms.ToolStripMenuItem itemVendas;
         private System.Windows.Forms.ToolStripMenuItem itemFaturamento;
         private System.Windows.Forms.ToolStripMenuItem itemEstoque;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
     }
 }
