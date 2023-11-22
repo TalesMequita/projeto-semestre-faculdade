@@ -222,5 +222,10 @@ namespace Projeto_Faculdade
                 
             
         }
+
+        private void frm_categorias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

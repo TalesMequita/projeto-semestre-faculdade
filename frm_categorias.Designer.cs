@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
@@ -44,8 +46,7 @@
             this.itemVendas = new System.Windows.Forms.ToolStripMenuItem();
             this.itemFaturamento = new System.Windows.Forms.ToolStripMenuItem();
             this.itemEstoque = new System.Windows.Forms.ToolStripMenuItem();
-            this.ID_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_limpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,17 +57,30 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_categoria,
             this.Nome});
-            this.dataGridView1.Location = new System.Drawing.Point(47, 219);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 192);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(493, 160);
+            this.dataGridView1.Size = new System.Drawing.Size(493, 187);
             this.dataGridView1.TabIndex = 21;
+            // 
+            // ID_categoria
+            // 
+            this.ID_categoria.HeaderText = "ID_categoria";
+            this.ID_categoria.Name = "ID_categoria";
+            this.ID_categoria.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 350;
             // 
             // btn_buscar
             // 
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_buscar.Location = new System.Drawing.Point(344, 149);
+            this.btn_buscar.Location = new System.Drawing.Point(300, 149);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(96, 37);
             this.btn_buscar.TabIndex = 20;
@@ -78,7 +92,7 @@
             // 
             this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_excluir.Location = new System.Drawing.Point(242, 149);
+            this.btn_excluir.Location = new System.Drawing.Point(198, 149);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(96, 37);
             this.btn_excluir.TabIndex = 19;
@@ -89,7 +103,7 @@
             // 
             this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cadastrar.Location = new System.Drawing.Point(140, 149);
+            this.btn_cadastrar.Location = new System.Drawing.Point(96, 149);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(96, 37);
             this.btn_cadastrar.TabIndex = 18;
@@ -205,18 +219,16 @@
             this.itemEstoque.Text = "Estoque";
             this.itemEstoque.Click += new System.EventHandler(this.bnt_relat_estoque);
             // 
-            // ID_categoria
+            // btn_limpar
             // 
-            this.ID_categoria.HeaderText = "ID_categoria";
-            this.ID_categoria.Name = "ID_categoria";
-            this.ID_categoria.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 350;
+            this.btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_limpar.Location = new System.Drawing.Point(402, 149);
+            this.btn_limpar.Name = "btn_limpar";
+            this.btn_limpar.Size = new System.Drawing.Size(96, 37);
+            this.btn_limpar.TabIndex = 25;
+            this.btn_limpar.Text = "Limpar";
+            this.btn_limpar.UseVisualStyleBackColor = true;
             // 
             // frm_categorias
             // 
@@ -224,6 +236,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(581, 391);
+            this.Controls.Add(this.btn_limpar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
@@ -235,6 +248,7 @@
             this.Name = "frm_categorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRO DE CATEGORIAS";
+            this.Load += new System.EventHandler(this.frm_categorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -263,5 +277,6 @@
         private System.Windows.Forms.ToolStripMenuItem itemEstoque;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.Button btn_limpar;
     }
 }
