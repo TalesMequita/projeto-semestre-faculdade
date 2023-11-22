@@ -36,29 +36,29 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_nome = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
             this.cb_cargo = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_endereco = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txt_cpf = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.img_usuario = new System.Windows.Forms.PictureBox();
+            this.txt_cep = new System.Windows.Forms.MaskedTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_senha = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_telefone = new System.Windows.Forms.MaskedTextBox();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_usuario)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -149,31 +149,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.bnt_cadastrar);
             // 
-            // textBox1
+            // txt_nome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(180, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(368, 26);
-            this.textBox1.TabIndex = 13;
+            this.txt_nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_nome.Location = new System.Drawing.Point(180, 73);
+            this.txt_nome.Name = "txt_nome";
+            this.txt_nome.Size = new System.Drawing.Size(368, 26);
+            this.txt_nome.TabIndex = 13;
             // 
-            // textBox2
+            // txt_email
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(180, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(368, 26);
-            this.textBox2.TabIndex = 14;
+            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_email.Location = new System.Drawing.Point(180, 105);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(368, 26);
+            this.txt_email.TabIndex = 14;
             // 
             // cb_cargo
             // 
             this.cb_cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_cargo.FormattingEnabled = true;
+            this.cb_cargo.Items.AddRange(new object[] {
+            "Nenhum"});
             this.cb_cargo.Location = new System.Drawing.Point(319, 247);
             this.cb_cargo.Name = "cb_cargo";
             this.cb_cargo.Size = new System.Drawing.Size(121, 28);
             this.cb_cargo.TabIndex = 19;
-            
             // 
             // button2
             // 
@@ -185,13 +186,13 @@
             this.button2.Text = "CANCELAR";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txt_endereco
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.Location = new System.Drawing.Point(678, 73);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(184, 26);
-            this.textBox7.TabIndex = 23;
+            this.txt_endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_endereco.Location = new System.Drawing.Point(678, 73);
+            this.txt_endereco.Name = "txt_endereco";
+            this.txt_endereco.Size = new System.Drawing.Size(184, 26);
+            this.txt_endereco.TabIndex = 23;
             // 
             // label9
             // 
@@ -215,13 +216,13 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "CEP:";
             // 
-            // textBox4
+            // txt_usuario
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(319, 281);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 26);
-            this.textBox4.TabIndex = 27;
+            this.txt_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_usuario.Location = new System.Drawing.Point(319, 281);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(121, 26);
+            this.txt_usuario.TabIndex = 27;
             // 
             // label8
             // 
@@ -234,13 +235,13 @@
             this.label8.TabIndex = 26;
             this.label8.Text = "USUÁRIO:";
             // 
-            // textBox9
+            // txt_cpf
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox9.Location = new System.Drawing.Point(180, 172);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(181, 26);
-            this.textBox9.TabIndex = 30;
+            this.txt_cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_cpf.Location = new System.Drawing.Point(180, 172);
+            this.txt_cpf.Name = "txt_cpf";
+            this.txt_cpf.Size = new System.Drawing.Size(181, 26);
+            this.txt_cpf.TabIndex = 30;
             // 
             // label11
             // 
@@ -253,22 +254,22 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "CPF:";
             // 
-            // pictureBox1
+            // img_usuario
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(530, 217);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 153);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
+            this.img_usuario.Location = new System.Drawing.Point(530, 217);
+            this.img_usuario.Name = "img_usuario";
+            this.img_usuario.Size = new System.Drawing.Size(199, 153);
+            this.img_usuario.TabIndex = 31;
+            this.img_usuario.TabStop = false;
             // 
-            // maskedTextBox3
+            // txt_cep
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.maskedTextBox3.Location = new System.Drawing.Point(678, 108);
-            this.maskedTextBox3.Mask = "00000-999";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(121, 26);
-            this.maskedTextBox3.TabIndex = 34;
+            this.txt_cep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_cep.Location = new System.Drawing.Point(678, 108);
+            this.txt_cep.Mask = "00000-999";
+            this.txt_cep.Name = "txt_cep";
+            this.txt_cep.Size = new System.Drawing.Size(121, 26);
+            this.txt_cep.TabIndex = 34;
             // 
             // button3
             // 
@@ -291,14 +292,14 @@
             this.label12.TabIndex = 36;
             this.label12.Text = "FOTO";
             // 
-            // textBox5
+            // txt_senha
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(319, 313);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PasswordChar = '*';
-            this.textBox5.Size = new System.Drawing.Size(121, 26);
-            this.textBox5.TabIndex = 37;
+            this.txt_senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_senha.Location = new System.Drawing.Point(319, 313);
+            this.txt_senha.Name = "txt_senha";
+            this.txt_senha.PasswordChar = '*';
+            this.txt_senha.Size = new System.Drawing.Size(121, 26);
+            this.txt_senha.TabIndex = 37;
             // 
             // textBox6
             // 
@@ -309,14 +310,14 @@
             this.textBox6.Size = new System.Drawing.Size(121, 26);
             this.textBox6.TabIndex = 38;
             // 
-            // maskedTextBox1
+            // txt_telefone
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(180, 140);
-            this.maskedTextBox1.Mask = "(99) 00000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox1.TabIndex = 39;
+            this.txt_telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_telefone.Location = new System.Drawing.Point(180, 140);
+            this.txt_telefone.Mask = "(99) 00000-0000";
+            this.txt_telefone.Name = "txt_telefone";
+            this.txt_telefone.Size = new System.Drawing.Size(181, 26);
+            this.txt_telefone.TabIndex = 39;
             // 
             // radioButtonFemale
             // 
@@ -366,23 +367,23 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.radioButtonMale);
             this.Controls.Add(this.radioButtonFemale);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txt_telefone);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txt_senha);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txt_cep);
+            this.Controls.Add(this.img_usuario);
+            this.Controls.Add(this.txt_cpf);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txt_endereco);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cb_cargo);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_email);
+            this.Controls.Add(this.txt_nome);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
@@ -396,7 +397,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRO DE FUNCIONARIO";
             this.Load += new System.EventHandler(this.frm_cadastro_usuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_usuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,24 +412,24 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_nome;
+        private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.ComboBox cb_cargo;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_endereco;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txt_cpf;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.PictureBox img_usuario;
+        private System.Windows.Forms.MaskedTextBox txt_cep;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_senha;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txt_telefone;
         private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.RadioButton radioButtonMale;
         private System.Windows.Forms.Label label13;

@@ -122,7 +122,7 @@ namespace Projeto_Faculdade
                 Conexao = new MySqlConnection(data_source);
 
                 string sql = "INSERT INTO fornecedor (nome,CNPJ,telefone,representante) " +
-                            "VALUES " + "('" + txtNomeFornecedor.Text + "', '" + txtCNPJ.Text + "', '" + txtTelefone.Text + "', '" + txtRepresentante.Text + "') ";
+                            "VALUES " + "('" + txtNomeFornecedor.Text + "', '" + txtCNPJ.Text + "', '" + txtTelefone.Text + "', '" + txtRepresentante.Text + "')";
 
                 MySqlCommand comando = new MySqlCommand(sql, Conexao);
 
