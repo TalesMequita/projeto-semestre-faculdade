@@ -38,7 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_cargo = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -165,14 +165,15 @@
             this.textBox2.Size = new System.Drawing.Size(368, 26);
             this.textBox2.TabIndex = 14;
             // 
-            // comboBox1
+            // cb_cargo
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(319, 247);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 19;
+            this.cb_cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cb_cargo.FormattingEnabled = true;
+            this.cb_cargo.Location = new System.Drawing.Point(319, 247);
+            this.cb_cargo.Name = "cb_cargo";
+            this.cb_cargo.Size = new System.Drawing.Size(121, 28);
+            this.cb_cargo.TabIndex = 19;
+            
             // 
             // button2
             // 
@@ -379,7 +380,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_cargo);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
@@ -412,7 +413,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_cargo;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label9;
