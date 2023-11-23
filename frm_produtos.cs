@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace Projeto_Faculdade
 {
     public partial class frm_produtos : Form
     {
+        private MySqlConnection Conexao;
+        private string data_source = "datasource=localhost;username=root;password=1234567;database=db_pjsistema";
+
         public frm_produtos()
         {
             InitializeComponent();
@@ -121,7 +125,43 @@ namespace Projeto_Faculdade
         // Função que vai coletar os dados, adicionar em uma lista e exibir no dataGridView
         private void bnt_cad_produto(object sender, EventArgs e)
         {
-            // Pegando os valores inseridos:
+
+            try
+            {
+                // Conectando com MySQL
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
+                MySqlCommand cmd_cadProduto = new MySqlCommand();
+
+                cmd_cadProduto.Connection = Conexao;
+
+                cmd_cadProduto.CommandText = "INSERT INTO produto (nome, quantidade, validade, custo, preco, fornecedor_nome)" +
+                                             "VALUES " + "(@nome, @quantidade, @validade, @custo, @preco, @fornecedor_nome)";
+
+                cmd_cadProduto.Parameters.AddWithValue("@nome", txt_nome.Text);
+                cmd_cadProduto.Parameters.AddWithValue("@quantidade", txt_quantidade.Text);
+                cmd_cadProduto.Parameters.AddWithValue("@validade", date_validade.Value.ToString("yyyy/MM-dd"));
+                cmd_cadProduto.Parameters.AddWithValue("@custo", float.Parse(txt_custo.Text));
+                cmd_cadProduto.Parameters.AddWithValue("@preco", float.Parse(txt_valor.Text));
+                cmd_cadProduto.Parameters.AddWithValue("@fornecedor_nome", cb_fornecedor.Text);
+
+                cmd_cadProduto.Prepare();
+                cmd_cadProduto.ExecuteNonQuery();
+
+                MessageBox.Show("Produto cadastrado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "erro",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+
+            /*// Pegando os valores inseridos:
             string nome = textBoxNome.Text;
             string marca = textBoxMarca.Text;
             string valor = textBoxValor.Text;
@@ -129,7 +169,7 @@ namespace Projeto_Faculdade
             DateTime validade = dateTimePickerValidade.Value;
 
             // Criando um objeto e inserindo as variaveis nele:
-            Produto produto = new Produto 
+            Produto produto = new Produto
             {
                 Nome = nome,
                 Valor = valor,
@@ -142,24 +182,24 @@ namespace Projeto_Faculdade
             listaProdutos.Add(produto);
 
             // Exibindo a lista no dataGridView
-            dataGridViewProdutos.DataSource = listaProdutos;
+            dataGridViewProdutos.DataSource = listaProdutos;*/
         }
 
         // Botão de cancelamento, em que vai limpar as caixas e valores dos textBox e dataTimePicker
         private void bnt_cancelar(object sender, EventArgs e)
         {
-            textBoxNome.Clear();
-            textBoxMarca.Clear();
-            textBoxValor.Clear();
-            textBoxQuantidade.Clear();
-            dateTimePickerValidade.Value = DateTime.Now; // Definindo para a data de hoje
+            txt_nome.Clear();
+            txt_custo.Clear();
+            txt_valor.Clear();
+            txt_quantidade.Clear();
+            date_validade.Value = DateTime.Now; // Definindo para a data de hoje
         }
 
         // Botão de excluir que vai coletar a linha em que você clicar do dataGridView e apagar ela:
-        private void bnt_excluir(object sender, EventArgs e) 
+        private void bnt_excluir(object sender, EventArgs e)
         {
             // Verificando se você clicou em uma linha
-            if(dataGridViewProdutos.SelectedRows.Count > 0)
+            if (dataGridViewProdutos.SelectedRows.Count > 0)
             {
                 // Recebendo a linha
                 DataGridViewRow linhaSelecionada = dataGridViewProdutos.SelectedRows[0];
@@ -182,7 +222,44 @@ namespace Projeto_Faculdade
 
         private void frm_produtos_Load(object sender, EventArgs e)
         {
+            PreencherComboBox();
+        }
+        private void PreencherComboBox()
+        {
+            MySqlConnection Conexao = new MySqlConnection(data_source);
 
+            string vqueryCargo = @"SELECT nome FROM fornecedor ORDER BY id";
+
+            MySqlCommand command = new MySqlCommand(vqueryCargo, Conexao);
+
+            try
+            {
+                Conexao.Open();
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string valor = reader["nome"].ToString();
+                    cb_fornecedor.Items.Add(valor);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
+            }
+            finally
+            {
+                if (Conexao.State == ConnectionState.Open)
+                {
+                    Conexao.Close();
+                }
+            }
+        }
+
+        private void date_validade_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

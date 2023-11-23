@@ -136,5 +136,22 @@ namespace Projeto_Faculdade
             frm.ShowDialog();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frm_login frm = new frm_login();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
