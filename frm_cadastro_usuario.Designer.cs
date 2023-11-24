@@ -49,7 +49,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.img_usuario = new System.Windows.Forms.PictureBox();
             this.txt_cep = new System.Windows.Forms.MaskedTextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_buscarImg = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_senha = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -58,6 +58,7 @@
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btn_limparImg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_usuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,7 +171,10 @@
             this.cb_cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_cargo.FormattingEnabled = true;
             this.cb_cargo.Items.AddRange(new object[] {
-            "Nenhum"});
+            "Nenhum",
+            "Administrador",
+            "Caixa",
+            "Supervisor"});
             this.cb_cargo.Location = new System.Drawing.Point(319, 247);
             this.cb_cargo.Name = "cb_cargo";
             this.cb_cargo.Size = new System.Drawing.Size(121, 28);
@@ -257,9 +261,10 @@
             // 
             // img_usuario
             // 
-            this.img_usuario.Location = new System.Drawing.Point(530, 217);
+            this.img_usuario.Location = new System.Drawing.Point(532, 217);
             this.img_usuario.Name = "img_usuario";
-            this.img_usuario.Size = new System.Drawing.Size(199, 153);
+            this.img_usuario.Size = new System.Drawing.Size(199, 111);
+            this.img_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_usuario.TabIndex = 31;
             this.img_usuario.TabStop = false;
             // 
@@ -272,16 +277,16 @@
             this.txt_cep.Size = new System.Drawing.Size(121, 26);
             this.txt_cep.TabIndex = 34;
             // 
-            // button3
+            // btn_buscarImg
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(748, 217);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 32);
-            this.button3.TabIndex = 35;
-            this.button3.Text = "BUSCAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_buscarImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_buscarImg.Location = new System.Drawing.Point(748, 217);
+            this.btn_buscarImg.Name = "btn_buscarImg";
+            this.btn_buscarImg.Size = new System.Drawing.Size(100, 32);
+            this.btn_buscarImg.TabIndex = 35;
+            this.btn_buscarImg.Text = "BUSCAR";
+            this.btn_buscarImg.UseVisualStyleBackColor = true;
+            this.btn_buscarImg.Click += new System.EventHandler(this.btn_buscarImg_Click);
             // 
             // label12
             // 
@@ -360,12 +365,24 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btn_limparImg
+            // 
+            this.btn_limparImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_limparImg.Location = new System.Drawing.Point(748, 255);
+            this.btn_limparImg.Name = "btn_limparImg";
+            this.btn_limparImg.Size = new System.Drawing.Size(100, 32);
+            this.btn_limparImg.TabIndex = 43;
+            this.btn_limparImg.Text = "LIMPAR";
+            this.btn_limparImg.UseVisualStyleBackColor = true;
+            this.btn_limparImg.Click += new System.EventHandler(this.btn_limparImg_Click);
+            // 
             // frm_cadastro_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(884, 433);
+            this.Controls.Add(this.btn_limparImg);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.radioButtonMale);
             this.Controls.Add(this.radioButtonFemale);
@@ -373,7 +390,7 @@
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.txt_senha);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_buscarImg);
             this.Controls.Add(this.txt_cep);
             this.Controls.Add(this.img_usuario);
             this.Controls.Add(this.txt_cpf);
@@ -427,7 +444,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox img_usuario;
         private System.Windows.Forms.MaskedTextBox txt_cep;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_buscarImg;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_senha;
         private System.Windows.Forms.TextBox textBox6;
@@ -436,5 +453,6 @@
         private System.Windows.Forms.RadioButton radioButtonMale;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btn_limparImg;
     }
 }

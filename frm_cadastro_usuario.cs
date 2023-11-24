@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Windows.Forms.DataVisualization.Charting;
 using MySql.Data.MySqlClient;
 
 namespace Projeto_Faculdade
@@ -29,35 +29,7 @@ namespace Projeto_Faculdade
         }
         private void PreencherComboBoxCargo() 
         {
-            MySqlConnection Conexao = new MySqlConnection(data_source);
-
-            string vqueryCargo = @"SELECT cargo FROM funcao ORDER BY int_cargo";
-
-            MySqlCommand command = new MySqlCommand(vqueryCargo, Conexao);
-
-            try
-            {
-                Conexao.Open();
-
-                MySqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    string valor = reader["cargo"].ToString();
-                    cb_cargo.Items.Add(valor);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
-            }
-            finally 
-            { 
-                if (Conexao.State == ConnectionState.Open)
-                {
-                    Conexao.Close();    
-                }
-            }
+            
         }
 
         private void bnt_cadastrar(object sender, EventArgs e)
@@ -149,9 +121,45 @@ namespace Projeto_Faculdade
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btn_buscarImg_Click(object sender, EventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.Filter = "Arquivo de Imagem| * .jpg; *.jpeg; *.png";
+            ofd.Title = "Selecione as Imagens";
+            ofd.Multiselect = true;
+
+            DialogResult result = ofd.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                foreach (string file in ofd.FileNames)
+                {
+                    PictureBox pictureBox = new PictureBox();
+
+                    pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+
+                    pictureBox.Image = Image.FromFile(file);
+                    img_usuario.Controls.Add(pictureBox);
+                }
+            }
+
 
         }
+
+        private void btn_limparImg_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in img_usuario.Controls)
+            {
+                if (control is PictureBox pictureBox) 
+                {
+                    img_usuario.Controls.Remove(pictureBox);
+                    pictureBox.Dispose();
+                    break;
+                }
+            }
+            
+        }
     }
+    
 }
