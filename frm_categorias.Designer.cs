@@ -229,6 +229,7 @@
             this.btn_limpar.TabIndex = 25;
             this.btn_limpar.Text = "Limpar";
             this.btn_limpar.UseVisualStyleBackColor = true;
+            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
             // frm_categorias
             // 

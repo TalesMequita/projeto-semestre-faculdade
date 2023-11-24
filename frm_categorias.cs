@@ -227,5 +227,11 @@ namespace Projeto_Faculdade
         {
 
         }
+
+        private void btn_limpar_Click(object sender, EventArgs e)
+        {
+            txt_categoria.Clear();
+            dataGridView1.Rows.Clear();   
+        }
     }
 }
