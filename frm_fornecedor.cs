@@ -8,10 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MySql.Data.MySqlClient;
+
 namespace Projeto_Faculdade
 {
     public partial class frm_fornecedor : Form
     {
+        private MySqlConnection Conexao;
+        private string data_source = "datasource=localhost;username=root;password=1234567;database=db_pjsistema";
+
         public frm_fornecedor()
         {
             InitializeComponent();
@@ -108,6 +113,30 @@ namespace Projeto_Faculdade
             frm.ShowDialog();
 
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                Conexao = new MySqlConnection(data_source);
+
+                string sql = "INSERT INTO fornecedor (nome,CNPJ,telefone,representante) " +
+                            "VALUES " + "('" + txtNomeFornecedor.Text + "', '" + txtCNPJ.Text + "', '" + txtTelefone.Text + "', '" + txtRepresentante.Text + "')";
+
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                Conexao.Open(); 
+                comando.ExecuteReader();
+                MessageBox.Show("Fornecedor cadastrado com sucesso!");
+
+            } catch (Exception ex)  
+            { 
+                MessageBox.Show("erro: " + ex.Message);
+            } finally 
+            { 
+                Conexao.Close();
+            }
         }
     }
 }

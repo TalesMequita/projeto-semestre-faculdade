@@ -94,6 +94,7 @@
             this.linkLabelCadastrar.TabIndex = 6;
             this.linkLabelCadastrar.TabStop = true;
             this.linkLabelCadastrar.Text = "Não tem conta?Cadastrar-se";
+            this.linkLabelCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCadastrar_LinkClicked);
             // 
             // label3
             // 
