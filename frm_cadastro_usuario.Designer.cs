@@ -40,15 +40,11 @@
             this.txt_email = new System.Windows.Forms.TextBox();
             this.cb_cargo = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.txt_endereco = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_cpf = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.img_usuario = new System.Windows.Forms.PictureBox();
-            this.txt_cep = new System.Windows.Forms.MaskedTextBox();
             this.btn_buscarImg = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_senha = new System.Windows.Forms.TextBox();
@@ -59,6 +55,18 @@
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btn_limparImg = new System.Windows.Forms.Button();
+            this.txt_bairro = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txt_numero_endereco = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_rua = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_cidade = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.maskedTextBoxCEP = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txt_estado = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_usuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,7 +97,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(23, 143);
+            this.label3.Location = new System.Drawing.Point(23, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 4;
@@ -100,7 +108,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(147, 255);
+            this.label4.Location = new System.Drawing.Point(153, 349);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 20);
             this.label4.TabIndex = 5;
@@ -111,7 +119,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(147, 318);
+            this.label5.Location = new System.Drawing.Point(153, 412);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 20);
             this.label5.TabIndex = 6;
@@ -122,7 +130,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(147, 350);
+            this.label6.Location = new System.Drawing.Point(153, 444);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(166, 20);
             this.label6.TabIndex = 7;
@@ -142,7 +150,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(300, 389);
+            this.button1.Location = new System.Drawing.Point(306, 483);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 32);
             this.button1.TabIndex = 9;
@@ -175,7 +183,7 @@
             "Administrador",
             "Caixa",
             "Supervisor"});
-            this.cb_cargo.Location = new System.Drawing.Point(319, 247);
+            this.cb_cargo.Location = new System.Drawing.Point(325, 341);
             this.cb_cargo.Name = "cb_cargo";
             this.cb_cargo.Size = new System.Drawing.Size(121, 28);
             this.cb_cargo.TabIndex = 19;
@@ -183,7 +191,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(470, 389);
+            this.button2.Location = new System.Drawing.Point(476, 483);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 32);
             this.button2.TabIndex = 10;
@@ -191,40 +199,10 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txt_endereco
-            // 
-            this.txt_endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_endereco.Location = new System.Drawing.Point(678, 73);
-            this.txt_endereco.Name = "txt_endereco";
-            this.txt_endereco.Size = new System.Drawing.Size(184, 26);
-            this.txt_endereco.TabIndex = 23;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label9.Location = new System.Drawing.Point(572, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 20);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "ENDEREÇO";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label10.Location = new System.Drawing.Point(572, 111);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 20);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "CEP:";
-            // 
             // txt_usuario
             // 
             this.txt_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_usuario.Location = new System.Drawing.Point(319, 281);
+            this.txt_usuario.Location = new System.Drawing.Point(325, 375);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(121, 26);
             this.txt_usuario.TabIndex = 27;
@@ -234,7 +212,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label8.Location = new System.Drawing.Point(147, 287);
+            this.label8.Location = new System.Drawing.Point(153, 381);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 20);
             this.label8.TabIndex = 26;
@@ -243,7 +221,7 @@
             // txt_cpf
             // 
             this.txt_cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_cpf.Location = new System.Drawing.Point(180, 172);
+            this.txt_cpf.Location = new System.Drawing.Point(180, 140);
             this.txt_cpf.Name = "txt_cpf";
             this.txt_cpf.Size = new System.Drawing.Size(181, 26);
             this.txt_cpf.TabIndex = 30;
@@ -253,7 +231,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label11.Location = new System.Drawing.Point(23, 175);
+            this.label11.Location = new System.Drawing.Point(23, 143);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 20);
             this.label11.TabIndex = 29;
@@ -261,26 +239,17 @@
             // 
             // img_usuario
             // 
-            this.img_usuario.Location = new System.Drawing.Point(532, 217);
+            this.img_usuario.Location = new System.Drawing.Point(561, 341);
             this.img_usuario.Name = "img_usuario";
             this.img_usuario.Size = new System.Drawing.Size(199, 111);
             this.img_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.img_usuario.TabIndex = 31;
             this.img_usuario.TabStop = false;
             // 
-            // txt_cep
-            // 
-            this.txt_cep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_cep.Location = new System.Drawing.Point(678, 108);
-            this.txt_cep.Mask = "00000-999";
-            this.txt_cep.Name = "txt_cep";
-            this.txt_cep.Size = new System.Drawing.Size(121, 26);
-            this.txt_cep.TabIndex = 34;
-            // 
             // btn_buscarImg
             // 
             this.btn_buscarImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_buscarImg.Location = new System.Drawing.Point(748, 217);
+            this.btn_buscarImg.Location = new System.Drawing.Point(777, 341);
             this.btn_buscarImg.Name = "btn_buscarImg";
             this.btn_buscarImg.Size = new System.Drawing.Size(100, 32);
             this.btn_buscarImg.TabIndex = 35;
@@ -293,7 +262,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label12.Location = new System.Drawing.Point(601, 194);
+            this.label12.Location = new System.Drawing.Point(630, 318);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 20);
             this.label12.TabIndex = 36;
@@ -302,7 +271,7 @@
             // txt_senha
             // 
             this.txt_senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_senha.Location = new System.Drawing.Point(319, 313);
+            this.txt_senha.Location = new System.Drawing.Point(325, 407);
             this.txt_senha.Name = "txt_senha";
             this.txt_senha.PasswordChar = '*';
             this.txt_senha.Size = new System.Drawing.Size(121, 26);
@@ -311,7 +280,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(319, 345);
+            this.textBox6.Location = new System.Drawing.Point(325, 439);
             this.textBox6.Name = "textBox6";
             this.textBox6.PasswordChar = '*';
             this.textBox6.Size = new System.Drawing.Size(121, 26);
@@ -320,10 +289,10 @@
             // txt_telefone
             // 
             this.txt_telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_telefone.Location = new System.Drawing.Point(180, 140);
+            this.txt_telefone.Location = new System.Drawing.Point(180, 173);
             this.txt_telefone.Mask = "(99) 00000-0000";
             this.txt_telefone.Name = "txt_telefone";
-            this.txt_telefone.Size = new System.Drawing.Size(181, 26);
+            this.txt_telefone.Size = new System.Drawing.Size(139, 26);
             this.txt_telefone.TabIndex = 39;
             // 
             // radioButtonFemale
@@ -368,7 +337,7 @@
             // btn_limparImg
             // 
             this.btn_limparImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_limparImg.Location = new System.Drawing.Point(748, 255);
+            this.btn_limparImg.Location = new System.Drawing.Point(777, 379);
             this.btn_limparImg.Name = "btn_limparImg";
             this.btn_limparImg.Size = new System.Drawing.Size(100, 32);
             this.btn_limparImg.TabIndex = 43;
@@ -376,12 +345,139 @@
             this.btn_limparImg.UseVisualStyleBackColor = true;
             this.btn_limparImg.Click += new System.EventHandler(this.btn_limparImg_Click);
             // 
+            // txt_bairro
+            // 
+            this.txt_bairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_bairro.Location = new System.Drawing.Point(702, 169);
+            this.txt_bairro.Name = "txt_bairro";
+            this.txt_bairro.Size = new System.Drawing.Size(184, 26);
+            this.txt_bairro.TabIndex = 62;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label17.Location = new System.Drawing.Point(596, 175);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(76, 20);
+            this.label17.TabIndex = 61;
+            this.label17.Text = "BAIRRO:";
+            // 
+            // txt_numero_endereco
+            // 
+            this.txt_numero_endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_numero_endereco.Location = new System.Drawing.Point(702, 234);
+            this.txt_numero_endereco.Name = "txt_numero_endereco";
+            this.txt_numero_endereco.Size = new System.Drawing.Size(72, 26);
+            this.txt_numero_endereco.TabIndex = 60;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label16.Location = new System.Drawing.Point(596, 240);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(84, 20);
+            this.label16.TabIndex = 59;
+            this.label16.Text = "NÚMERO:";
+            // 
+            // txt_rua
+            // 
+            this.txt_rua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_rua.Location = new System.Drawing.Point(702, 202);
+            this.txt_rua.Name = "txt_rua";
+            this.txt_rua.Size = new System.Drawing.Size(184, 26);
+            this.txt_rua.TabIndex = 58;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label15.Location = new System.Drawing.Point(596, 208);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 20);
+            this.label15.TabIndex = 57;
+            this.label15.Text = "RUA:";
+            // 
+            // txt_cidade
+            // 
+            this.txt_cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_cidade.Location = new System.Drawing.Point(702, 137);
+            this.txt_cidade.Name = "txt_cidade";
+            this.txt_cidade.Size = new System.Drawing.Size(184, 26);
+            this.txt_cidade.TabIndex = 56;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label14.Location = new System.Drawing.Point(596, 143);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 20);
+            this.label14.TabIndex = 55;
+            this.label14.Text = "CIDADE:";
+            // 
+            // maskedTextBoxCEP
+            // 
+            this.maskedTextBoxCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.maskedTextBoxCEP.Location = new System.Drawing.Point(702, 73);
+            this.maskedTextBoxCEP.Mask = "00000-000";
+            this.maskedTextBoxCEP.Name = "maskedTextBoxCEP";
+            this.maskedTextBoxCEP.Size = new System.Drawing.Size(89, 26);
+            this.maskedTextBoxCEP.TabIndex = 54;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label18.Location = new System.Drawing.Point(596, 76);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(45, 20);
+            this.label18.TabIndex = 53;
+            this.label18.Text = "CEP:";
+            // 
+            // txt_estado
+            // 
+            this.txt_estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_estado.Location = new System.Drawing.Point(702, 105);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(184, 26);
+            this.txt_estado.TabIndex = 52;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label19.Location = new System.Drawing.Point(596, 111);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(79, 20);
+            this.label19.TabIndex = 51;
+            this.label19.Text = "ESTADO:";
+            // 
             // frm_cadastro_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
-            this.ClientSize = new System.Drawing.Size(884, 433);
+            this.ClientSize = new System.Drawing.Size(948, 524);
+            this.Controls.Add(this.txt_bairro);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.txt_numero_endereco);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txt_rua);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txt_cidade);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.maskedTextBoxCEP);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.txt_estado);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.btn_limparImg);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.radioButtonMale);
@@ -391,15 +487,11 @@
             this.Controls.Add(this.txt_senha);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btn_buscarImg);
-            this.Controls.Add(this.txt_cep);
             this.Controls.Add(this.img_usuario);
             this.Controls.Add(this.txt_cpf);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txt_endereco);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.cb_cargo);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.txt_nome);
@@ -435,15 +527,11 @@
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.ComboBox cb_cargo;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txt_endereco;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_cpf;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox img_usuario;
-        private System.Windows.Forms.MaskedTextBox txt_cep;
         private System.Windows.Forms.Button btn_buscarImg;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_senha;
@@ -454,5 +542,17 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btn_limparImg;
+        private System.Windows.Forms.TextBox txt_bairro;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txt_numero_endereco;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txt_rua;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txt_cidade;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCEP;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txt_estado;
+        private System.Windows.Forms.Label label19;
     }
 }
