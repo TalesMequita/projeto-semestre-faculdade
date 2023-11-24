@@ -9,7 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Xml;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Ocsp;
 
 namespace Projeto_Faculdade
 {
@@ -49,44 +51,54 @@ namespace Projeto_Faculdade
                 cmd_cttFuncionario.Connection = Conexao;
 
                 // Table Endereço
-                cmd_Endereco.CommandText = "INSERT INTO endereco_funcionario (endereco, CEP) " +
-                                           "VALUES " + "(@endereco, @CEP)";
+                cmd_Endereco.CommandText = "INSERT INTO endereco_funcionario (rua, CEP, bairro, cidade, estado, numero) " +
+                                           "VALUES " + "(@rua, @CEP, @bairro, @cidade, @estado, @numero)";
 
-                cmd_Endereco.Parameters.AddWithValue("@endereco", txt_endereco.Text);
-                cmd_Endereco.Parameters.AddWithValue("@CEP", txt_cep.Text);
+                cmd_Endereco.Parameters.AddWithValue("@rua", txt_rua.Text);
+                cmd_Endereco.Parameters.AddWithValue("@CEP", maskedTextBoxCEP.Text);
+                cmd_Endereco.Parameters.AddWithValue("@bairro", txt_bairro.Text);
+                cmd_Endereco.Parameters.AddWithValue("@cidade", txt_cidade.Text);
+                cmd_Endereco.Parameters.AddWithValue("@estado", txt_estado.Text);
+                cmd_Endereco.Parameters.AddWithValue("@numero", txt_numero_endereco.Text);
 
                 cmd_Endereco.Prepare();
                 cmd_Endereco.ExecuteNonQuery();
                 long idEndereco = cmd_Endereco.LastInsertedId;
 
                 // Tabela contato_funcionario
-                cmd_cttFuncionario.CommandText = "INSERT INTO contato_funcionario (funcao, usuario, senha, foto_patch) " +
-                                  "VALUES " + "(@funcao, @usuario, @senha, @foto_patch)";
+                if (txt_senha.Text == txt_repetir_senha.Text) { 
+                    cmd_cttFuncionario.CommandText = "INSERT INTO contato_funcionario (funcao, usuario, senha, foto_patch) " +
+                                      "VALUES " + "(@funcao, @usuario, @senha, @foto_patch)";
 
-                cmd_cttFuncionario.Parameters.AddWithValue("@funcao", cb_cargo.Text);
-                cmd_cttFuncionario.Parameters.AddWithValue("@usuario", txt_usuario.Text);
-                cmd_cttFuncionario.Parameters.AddWithValue("@senha", txt_senha.Text);
-                cmd_cttFuncionario.Parameters.AddWithValue("@foto_patch", img_usuario.Text);
+                    cmd_cttFuncionario.Parameters.AddWithValue("@funcao", cb_cargo.Text);
+                    cmd_cttFuncionario.Parameters.AddWithValue("@usuario", txt_usuario.Text);
+                    cmd_cttFuncionario.Parameters.AddWithValue("@senha", txt_senha.Text);
+                    cmd_cttFuncionario.Parameters.AddWithValue("@foto_patch", img_usuario.Text);
 
-                cmd_cttFuncionario.Prepare();
-                cmd_cttFuncionario.ExecuteNonQuery();
-                long idContato = cmd_cttFuncionario.LastInsertedId;
+                    cmd_cttFuncionario.Prepare();
+                    cmd_cttFuncionario.ExecuteNonQuery();
+                    long idContato = cmd_cttFuncionario.LastInsertedId;
 
-                // Tabela Funcionario
-                cmd_Funcionario.CommandText = "INSERT INTO funcionario (nome, email, telefone, CPF, id_contato, id_endereco) " +
-                                              "VALUES " + "(@nome, @email, @telefone, @CPF, @id_contato, @id_endereco)";
+                    // Tabela Funcionario
+                    cmd_Funcionario.CommandText = "INSERT INTO funcionario (nome, email, telefone, CPF, id_contato, id_endereco) " +
+                                                  "VALUES " + "(@nome, @email, @telefone, @CPF, @id_contato, @id_endereco)";
 
-                cmd_Funcionario.Parameters.AddWithValue("@nome", txt_nome.Text);
-                cmd_Funcionario.Parameters.AddWithValue("@email", txt_email.Text);
-                cmd_Funcionario.Parameters.AddWithValue("@telefone", txt_telefone.Text);
-                cmd_Funcionario.Parameters.AddWithValue("@CPF", txt_cpf.Text);
-                cmd_Funcionario.Parameters.AddWithValue("@id_contato", idContato);
-                cmd_Funcionario.Parameters.AddWithValue("@id_endereco", idEndereco);
+                    cmd_Funcionario.Parameters.AddWithValue("@nome", txt_nome.Text);
+                    cmd_Funcionario.Parameters.AddWithValue("@email", txt_email.Text);
+                    cmd_Funcionario.Parameters.AddWithValue("@telefone", txt_telefone.Text);
+                    cmd_Funcionario.Parameters.AddWithValue("@CPF", txt_cpf.Text);
+                    cmd_Funcionario.Parameters.AddWithValue("@id_contato", idContato);
+                    cmd_Funcionario.Parameters.AddWithValue("@id_endereco", idEndereco);
 
-                cmd_Funcionario.Prepare();
-                cmd_Funcionario.ExecuteNonQuery();
+                    cmd_Funcionario.Prepare();
+                    cmd_Funcionario.ExecuteNonQuery();
 
-                MessageBox.Show("Usuario cadastrado com sucesso!");
+                    MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } else
+                {
+                    MessageBox.Show("As senhas são diferentes, redigite novamente as senhas.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+               
             }
             catch (Exception ex)
             {
@@ -159,6 +171,37 @@ namespace Projeto_Faculdade
                 }
             }
             
+        }
+
+        private void bnt_procurar_Click(object sender, EventArgs e)
+        {
+            LimparForm();
+
+            try
+            {
+                var WS = new ServiceReferenceCep.AtendeClienteClient();
+                var Resposta = WS.consultaCEP(maskedTextBoxCEP.Text);
+
+                txt_rua.Text = Resposta.end;
+                txt_estado.Text = Resposta.uf;
+                txt_cidade.Text = Resposta.cidade;
+                txt_bairro.Text = Resposta.bairro;
+
+            } catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao buscar o CEP.\n\n" + erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LimparForm()
+        {
+            
+            txt_rua.Text = "";
+            txt_estado.Text = "";
+            txt_cidade.Text = "";
+            txt_bairro.Text = "";
+            maskedTextBoxCEP.Focus();
+
         }
     }
     

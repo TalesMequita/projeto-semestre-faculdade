@@ -48,7 +48,7 @@
             this.btn_buscarImg = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_senha = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_repetir_senha = new System.Windows.Forms.TextBox();
             this.txt_telefone = new System.Windows.Forms.MaskedTextBox();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
@@ -67,6 +67,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.txt_estado = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.bnt_procurar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_usuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +142,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label7.Location = new System.Drawing.Point(289, 13);
+            this.label7.Location = new System.Drawing.Point(333, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(338, 31);
             this.label7.TabIndex = 8;
@@ -277,17 +278,18 @@
             this.txt_senha.Size = new System.Drawing.Size(121, 26);
             this.txt_senha.TabIndex = 37;
             // 
-            // textBox6
+            // txt_repetir_senha
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(325, 439);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PasswordChar = '*';
-            this.textBox6.Size = new System.Drawing.Size(121, 26);
-            this.textBox6.TabIndex = 38;
+            this.txt_repetir_senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_repetir_senha.Location = new System.Drawing.Point(325, 439);
+            this.txt_repetir_senha.Name = "txt_repetir_senha";
+            this.txt_repetir_senha.PasswordChar = '*';
+            this.txt_repetir_senha.Size = new System.Drawing.Size(121, 26);
+            this.txt_repetir_senha.TabIndex = 38;
             // 
             // txt_telefone
             // 
+            this.txt_telefone.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.txt_telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_telefone.Location = new System.Drawing.Point(180, 173);
             this.txt_telefone.Mask = "(99) 00000-0000";
@@ -460,12 +462,24 @@
             this.label19.TabIndex = 51;
             this.label19.Text = "ESTADO:";
             // 
+            // bnt_procurar
+            // 
+            this.bnt_procurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bnt_procurar.Location = new System.Drawing.Point(797, 67);
+            this.bnt_procurar.Name = "bnt_procurar";
+            this.bnt_procurar.Size = new System.Drawing.Size(121, 32);
+            this.bnt_procurar.TabIndex = 63;
+            this.bnt_procurar.Text = "PROCURAR";
+            this.bnt_procurar.UseVisualStyleBackColor = true;
+            this.bnt_procurar.Click += new System.EventHandler(this.bnt_procurar_Click);
+            // 
             // frm_cadastro_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(948, 524);
+            this.Controls.Add(this.bnt_procurar);
             this.Controls.Add(this.txt_bairro);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txt_numero_endereco);
@@ -483,7 +497,7 @@
             this.Controls.Add(this.radioButtonMale);
             this.Controls.Add(this.radioButtonFemale);
             this.Controls.Add(this.txt_telefone);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txt_repetir_senha);
             this.Controls.Add(this.txt_senha);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btn_buscarImg);
@@ -535,7 +549,7 @@
         private System.Windows.Forms.Button btn_buscarImg;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_senha;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_repetir_senha;
         private System.Windows.Forms.MaskedTextBox txt_telefone;
         private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.RadioButton radioButtonMale;
@@ -554,5 +568,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txt_estado;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button bnt_procurar;
     }
 }
