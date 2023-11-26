@@ -30,7 +30,7 @@ namespace Projeto_Faculdade
                 {
                     connection.Open();
 
-                    string sql = @"select p.codigo_produto, p.nome AS nome_produto, p.quantidade, p.preco, c.id_categoria, c.nome AS nome_categoria from produto_categoria pc JOIN produto p ON pc.codigo_produto = p.codigo_produto JOIN categoria c ON pc.id_categoria = c.id_categoria WHERE p.codigo_produto = @codigo;";
+                    string sql = @"select p.codigo_produto, p.nome AS nome_produto, p.preco, c.id_categoria, c.nome AS nome_categoria from produto_categoria pc JOIN produto p ON pc.codigo_produto = p.codigo_produto JOIN categoria c ON pc.id_categoria = c.id_categoria WHERE p.codigo_produto = @codigo;";
 
                     using (MySqlCommand command = new MySqlCommand(sql, connection))
                     {
@@ -50,16 +50,16 @@ namespace Projeto_Faculdade
                                 {
                                     CodigoProduto = reader["codigo_produto"].ToString(),
                                     NomeProduto = reader["nome_produto"].ToString(),
-                                    Quantidade = Convert.ToInt32(reader["quantidade"]),
+                                    Quantidade = Convert.ToInt32(textBoxQuantidade.Text),
                                     Preco = Convert.ToDecimal(reader["preco"]),
-                                    IdCategoria = Convert.ToInt32(reader["id_categoria"]),
                                     NomeCategoria = reader["nome_categoria"].ToString()
                                 };
                                 produtosCategorias.Add(produtoCategoria);
 
                                 try {
                                     nome_prod.Text = produtoCategoria.NomeProduto;
-                                    preco_total.Text = "R$" + (produtoCategoria.Preco * produtoCategoria.Quantidade);
+                                    AtualizarLabelsPrecoTotal();
+
                                 } catch {
                                     nome_prod.Text = "Nome não encontrado!";
                                 }
@@ -79,6 +79,23 @@ namespace Projeto_Faculdade
             }
         }
 
+        private void AtualizarLabelsPrecoTotal()
+        {
+            decimal precoTotalCompra = CalcularPrecoTotalCompra();
+            preco_total.Text = $"R$ {precoTotalCompra:F2}";
+        }
+
+        private decimal CalcularPrecoTotalCompra()
+        {
+            decimal precoTotal = 0;
+
+            foreach (var produtoCategoria in produtosCategorias)
+            {
+                precoTotal += produtoCategoria.Preco * produtoCategoria.Quantidade;
+            }
+
+            return precoTotal;
+        }
 
 
         public class ProdutoCategoria
@@ -86,9 +103,7 @@ namespace Projeto_Faculdade
             public string CodigoProduto { get; set; }
             public string NomeProduto { get; set; }
             public int Quantidade { get; set; }
-            public decimal Custo { get; set; }
             public decimal Preco { get; set; }
-            public int IdCategoria { get; set; }
             public string NomeCategoria { get; set; }
         }
 
@@ -210,51 +225,68 @@ namespace Projeto_Faculdade
                             command.ExecuteNonQuery();
                         }
                     }
+                    string formaPagamento = comboBoxFormaPag.SelectedItem?.ToString();
 
-                    string sqlVenda = "INSERT INTO venda(data_venda, valor, id_funcionario, forma_pagamento) VALUES (GETDATE(), @valor, @id_funcionario, @forma_pagamento);";
-
-                    using (MySqlCommand commandVenda = new MySqlCommand(sqlVenda, connection))
+                    if (formaPagamento != null)
                     {
-                        string sqlFuncionario = "SELECT id_funcionario FROM funcionario WHERE nome = @nome;";
+                        int idFormaPagamento = ObterIdFormaPagamento(connection, formaPagamento);
 
-                        try
+                        if (idFormaPagamento != -1)
                         {
-                            string nomeUsuario = InputDialog.ShowDialog("Informe o nome do funcionário", "Nome do Funcionário:");
+                            string sqlVenda = "INSERT INTO venda(data_venda, valor, id_funcionario, forma_pagamento) VALUES (NOW(), @valor, @id_funcionario, @idFormaPagamento);";
 
-                            using (MySqlCommand commandFuncionario = new MySqlCommand(sqlFuncionario, connection))
+                            using (MySqlCommand commandVenda = new MySqlCommand(sqlVenda, connection))
                             {
-                                commandFuncionario.Parameters.AddWithValue("@nome", nomeUsuario);
-                                var idFuncionario = commandFuncionario.ExecuteScalar();
+                                string sqlFuncionario = "SELECT id_funcionario FROM funcionario WHERE nome = @nome;";
 
-                                if (idFuncionario != null)
+                                try
                                 {
-                                    if (produtosCategorias.Any())
-                                    {
+                                    string nomeUsuario = InputDialog.ShowDialog("Informe o nome do funcionário", "Nome do Funcionário :");
 
-                                    var precoTotal = produtosCategorias.Sum(produto => produto.Preco * produto.Quantidade);
-                                    var quantidade = Convert.ToInt32(textBoxQuantidade.Text);
-                                    
-                                    commandVenda.Parameters.AddWithValue("@valor", precoTotal * quantidade);
-                                    commandVenda.Parameters.AddWithValue("@id_funcionario", idFuncionario);
-                                    commandVenda.Parameters.AddWithValue("@forma_pagamento", comboBoxFormaPag.Text);
-                                    commandVenda.ExecuteNonQuery();
-
-                                    } else
+                                    using (MySqlCommand commandFuncionario = new MySqlCommand(sqlFuncionario, connection))
                                     {
-                                        MessageBox.Show("Adicione produtos à venda antes de confirmar.", "Erro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        commandFuncionario.Parameters.AddWithValue("@nome", nomeUsuario);
+                                        var idFuncionario = commandFuncionario.ExecuteScalar();
+
+                                        if (idFuncionario != null)
+                                        {
+                                            if (produtosCategorias.Any())
+                                            {
+                                                var precoTotal = produtosCategorias.Sum(produto => produto.Preco * produto.Quantidade);
+                                                var quantidade = Convert.ToInt32(textBoxQuantidade.Text);
+
+                                                commandVenda.Parameters.AddWithValue("@valor", precoTotal * quantidade);
+                                                commandVenda.Parameters.AddWithValue("@id_funcionario", idFuncionario);
+                                                commandVenda.Parameters.AddWithValue("@idFormaPagamento", idFormaPagamento);
+                                                commandVenda.ExecuteNonQuery();
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Adicione produtos à venda antes de confirmar.", "Erro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Funcionário não encontrado!", "Erro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
                                     }
                                 }
-                                else
+                                catch (Exception error)
                                 {
-                                    MessageBox.Show("Funcionário não encontrado!", "Erro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show($"Erro ao tentar obter o ID do funcionário! Detalhes: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                         }
-                        catch (Exception error)
+                        else
                         {
-                            MessageBox.Show($"Erro ao tentar obter o ID do funcionário! Detalhes: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Forma de pagamento não encontrada!", "Erro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("Selecione uma forma de pagamento.", "Erro.", MessageBoxButtons.OK);
+                    }
+                    
                 }
             }
             catch (SqlException error)
@@ -264,6 +296,17 @@ namespace Projeto_Faculdade
             catch (Exception error)
             {
                 MessageBox.Show($"Erro: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private int ObterIdFormaPagamento(MySqlConnection connection, string formaPagamento)
+        {
+            string sql = "SELECT id_pagamento FROM forma_pagamento WHERE forma = @formaPagamento;";
+            using (MySqlCommand command = new MySqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@formaPagamento", formaPagamento);
+                var result = command.ExecuteScalar();
+                return result != null ? Convert.ToInt32(result) : -1;
             }
         }
 

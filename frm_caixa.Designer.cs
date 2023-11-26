@@ -120,16 +120,16 @@
             // 
             this.dataGridViewCompras.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCompras.Location = new System.Drawing.Point(59, 251);
+            this.dataGridViewCompras.Location = new System.Drawing.Point(110, 248);
             this.dataGridViewCompras.Name = "dataGridViewCompras";
-            this.dataGridViewCompras.Size = new System.Drawing.Size(662, 172);
+            this.dataGridViewCompras.Size = new System.Drawing.Size(547, 172);
             this.dataGridViewCompras.TabIndex = 8;
             // 
             // bnt_confirmar
             // 
             this.bnt_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bnt_confirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bnt_confirmar.Location = new System.Drawing.Point(71, 448);
+            this.bnt_confirmar.Location = new System.Drawing.Point(131, 446);
             this.bnt_confirmar.Name = "bnt_confirmar";
             this.bnt_confirmar.Size = new System.Drawing.Size(116, 26);
             this.bnt_confirmar.TabIndex = 9;
@@ -145,7 +145,7 @@
             "Crédito",
             "Débito",
             "Boleto"});
-            this.comboBoxFormaPag.Location = new System.Drawing.Point(220, 446);
+            this.comboBoxFormaPag.Location = new System.Drawing.Point(280, 444);
             this.comboBoxFormaPag.Name = "comboBoxFormaPag";
             this.comboBoxFormaPag.Size = new System.Drawing.Size(197, 28);
             this.comboBoxFormaPag.TabIndex = 11;
@@ -156,7 +156,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(223, 426);
+            this.label7.Location = new System.Drawing.Point(283, 424);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(172, 17);
             this.label7.TabIndex = 12;
@@ -248,7 +248,7 @@
             // 
             this.bnt_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bnt_adicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bnt_adicionar.Location = new System.Drawing.Point(605, 219);
+            this.bnt_adicionar.Location = new System.Drawing.Point(663, 248);
             this.bnt_adicionar.Name = "bnt_adicionar";
             this.bnt_adicionar.Size = new System.Drawing.Size(116, 26);
             this.bnt_adicionar.TabIndex = 33;
@@ -261,7 +261,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(492, 454);
+            this.label3.Location = new System.Drawing.Point(507, 452);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 34;
@@ -272,7 +272,7 @@
             this.preco_total.AutoSize = true;
             this.preco_total.BackColor = System.Drawing.Color.Transparent;
             this.preco_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.preco_total.Location = new System.Drawing.Point(561, 454);
+            this.preco_total.Location = new System.Drawing.Point(576, 452);
             this.preco_total.Name = "preco_total";
             this.preco_total.Size = new System.Drawing.Size(61, 20);
             this.preco_total.TabIndex = 35;
