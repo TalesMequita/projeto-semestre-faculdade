@@ -44,6 +44,8 @@ namespace Projeto_Faculdade
                         {
                             if (reader.HasRows) {
 
+                                reader.Read();
+
                                 ProdutoCategoria produtoCategoria = new ProdutoCategoria
                                 {
                                     CodigoProduto = reader["codigo_produto"].ToString(),

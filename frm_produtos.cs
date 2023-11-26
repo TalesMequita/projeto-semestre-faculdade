@@ -12,12 +12,11 @@ using System.Windows.Forms;
 using static Projeto_Faculdade.frm_caixa;
 
 namespace Projeto_Faculdade
-{   
+{
     public partial class frm_produtos : Form
     {
-        private MySqlConnection Conexao;
         private string data_source = "datasource=localhost;username=root;password=1234567;database=db_pjsistema";
-
+        private MySqlConnection Conexao;
         public frm_produtos()
         {
             InitializeComponent();
@@ -125,55 +124,39 @@ namespace Projeto_Faculdade
         {
             try
             {
-                using (MySqlConnection conexao = new MySqlConnection(data_source))
+                using (MySqlConnection Conexao = new MySqlConnection(data_source))
                 {
-                    conexao.Open();
+                    Conexao.Open();
 
                     string nomeFornecedor = cb_fornecedor.Text;
 
                     int idFornecedor = ObterIdForn(nomeFornecedor);
 
-                    if (idFornecedor != -1) { 
-                        using (MySqlCommand cmd_cadProduto = new MySqlCommand())
+                    if (idFornecedor != -1)
+                    {
+                        int idProduto = InserirProduto(Conexao, idFornecedor);
+
+                        if (idProduto != -1)
                         {
-                            cmd_cadProduto.Connection = conexao;
+                            int idCategoria = ProcurarCategoria(ObterCategoriaSelecionada());
 
-                            cmd_cadProduto.CommandText = "INSERT INTO produto (nome, quantidade, validade, preco, id_fornecedor)" +
-                                                         "VALUES (@nome, @quantidade, @validade, @preco, @fornecedor)";
-                            cmd_cadProduto.Parameters.AddWithValue("@nome", txt_nome.Text);
-                            cmd_cadProduto.Parameters.AddWithValue("@quantidade", Convert.ToInt32(txt_quantidade.Text));
-                            cmd_cadProduto.Parameters.AddWithValue("@validade", date_validade.Value.ToString("yyyy/MM/dd"));
-                            cmd_cadProduto.Parameters.AddWithValue("@preco", decimal.Parse(txt_valor.Text));
-                            cmd_cadProduto.Parameters.AddWithValue("@fornecedor", idFornecedor);
-                            
+                            if (idCategoria != -1)
+                            {
+                                InserirProdutoCategoria(Conexao, idProduto, idCategoria);
 
-                            cmd_cadProduto.Prepare();
-                            cmd_cadProduto.ExecuteNonQuery();
+                                MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                AtualizarDataGridView();
+                                LimparCaixas();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Categoria não encontrada", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-
-                        using (MySqlCommand insertIdProduroCategoria = new MySqlCommand())
+                        else
                         {
-                            insertIdProduroCategoria.Connection = conexao;
-
-                            // Pega o id de Produto
-                            string nomeProduto = (txt_nome.Text);
-                            int idProduto = ProcurarProduto(nomeProduto);
-
-                            // Pega o id de Categoria
-                            string nomeCategoria = (listBoxCategoria.Text);
-                            int idCategoria = ProcurarCategoria(nomeCategoria);
-
-                            insertIdProduroCategoria.CommandText = "INSERT INTO produto_categoria(codigo_produto, id_categoria) VALUES (@codigo_produto, @id_categoria)";
-                            insertIdProduroCategoria.Parameters.AddWithValue("@codigo_produto", idProduto);
-                            insertIdProduroCategoria.Parameters.AddWithValue("@id_categoria", idCategoria);
-
-                            insertIdProduroCategoria.Prepare();
-                            insertIdProduroCategoria.ExecuteNonQuery();
+                            MessageBox.Show("Erro ao cadastrar o produto", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-
-                        AtualizarDataGridView();
-                        MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LimparCaixas();
                     }
                     else
                     {
@@ -190,114 +173,201 @@ namespace Projeto_Faculdade
                 Conexao.Close();
             }
         }
+
+        private void AtualizarListBoxCategorias()
+        {
+            try
+            {
+                using (MySqlConnection Conexao = new MySqlConnection(data_source))
+                {
+                    Conexao.Open();
+
+                    string queryCategorias = "SELECT nome FROM categoria;";
+
+                    using (MySqlCommand command = new MySqlCommand(queryCategorias, Conexao))
+                    {
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            listBoxCategoria.Items.Clear(); // Limpa os itens existentes
+
+                            while (reader.Read())
+                            {
+                                string categoria = reader["nome"].ToString();
+                                listBoxCategoria.Items.Add(categoria);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar categorias: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private string ObterCategoriaSelecionada()
+        {
+            if (listBoxCategoria.SelectedItem != null)
+            {
+                return listBoxCategoria.SelectedItem.ToString();
+            }
+
+            return string.Empty;
+        }
+
+        private int InserirProduto(MySqlConnection Conexao, int idFornecedor)
+        {
+            try
+            {
+                using (MySqlCommand cmd_cadProduto = new MySqlCommand())
+                {
+                    cmd_cadProduto.Connection = Conexao;
+
+                    cmd_cadProduto.CommandText = "INSERT INTO produto (nome, quantidade, validade, preco, id_fornecedor)" +
+                                                 "VALUES (@nome, @quantidade, @validade, @preco, @fornecedor);";
+                    cmd_cadProduto.Parameters.AddWithValue("@nome", txt_nome.Text);
+                    cmd_cadProduto.Parameters.AddWithValue("@quantidade", Convert.ToInt32(txt_quantidade.Text));
+                    cmd_cadProduto.Parameters.AddWithValue("@validade", date_validade.Value.ToString("yyyy/MM/dd"));
+                    cmd_cadProduto.Parameters.AddWithValue("@preco", decimal.Parse(txt_valor.Text));
+                    cmd_cadProduto.Parameters.AddWithValue("@fornecedor", idFornecedor);
+
+                    cmd_cadProduto.Prepare();
+                    cmd_cadProduto.ExecuteNonQuery();
+
+                    // Obter o ID do último produto inserido
+                    cmd_cadProduto.CommandText = "SELECT LAST_INSERT_ID()";
+                    var result = cmd_cadProduto.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        AtualizarDataGridView();
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao cadastrar o produto: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+        }
+
+
+        private void InserirProdutoCategoria(MySqlConnection Conexao, int idProduto, int idCategoria)
+        {
+            try
+            {
+                using (MySqlCommand insertIdProduroCategoria = new MySqlCommand())
+                {
+                    insertIdProduroCategoria.Connection = Conexao;
+
+                    insertIdProduroCategoria.CommandText = "INSERT INTO produto_categoria(codigo_produto, id_categoria) VALUES (@codigo_produto, @id_categoria)";
+                    insertIdProduroCategoria.Parameters.AddWithValue("@codigo_produto", idProduto);
+                    insertIdProduroCategoria.Parameters.AddWithValue("@id_categoria", idCategoria);
+
+                    insertIdProduroCategoria.Prepare();
+                    insertIdProduroCategoria.ExecuteNonQuery();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"Erro ao cadastrar na tabela produto_categoria: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         // Pega o id da categoria para inserir na tabela produto_categoria
         private int ProcurarCategoria(string nomeCategoria)
         {
             try
             {
-                string query = @"SELECT id_categoria FROM categoria WHERE nome = @nomeCategoria;";
-
-                using (MySqlCommand command = new MySqlCommand(query, Conexao))
+                using (MySqlConnection Conexao = new MySqlConnection(data_source))
                 {
-                    command.Parameters.AddWithValue("@nomeCategoria", nomeCategoria);
 
-                    var result = command.ExecuteScalar();
+                    Conexao.Open();
+                    string query = @"SELECT id_categoria FROM categoria WHERE nome = @nomeCategoria;";
 
-                    if (result != null)
+                    using (MySqlCommand command = new MySqlCommand(query, Conexao))
                     {
-                        return Convert.ToInt32(result);
-                    }
-                    else
-                    {
-                        return -1;
+                        command.Parameters.AddWithValue("@nomeCategoria", nomeCategoria);
+
+                        var result = command.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            return Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            return -1;
+                        }
                     }
                 }
             }
             catch (Exception error)
             {
-                MessageBox.Show("Erro ao tentar encontrar a categoria {error.message}");
+                MessageBox.Show($"Erro ao tentar encontrar a categoria: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
         }
-        // Pega id do produto para inserir na tabela categoria_produto
-        private int ProcurarProduto(string nomeProduto)
-        {
-            try
-            {
-                string query = @"SELECT codigo_produto FROM produto WHERE nome = @nomeProduto;";
-
-                using (MySqlCommand command = new MySqlCommand(query, Conexao))
-                {
-                    command.Parameters.AddWithValue("@nomeProduto", nomeProduto);
-
-                    var result = command.ExecuteScalar();
-
-                    if (result != null)
-                    {
-                        return Convert.ToInt32(result);
-                    }
-                    else
-                    {
-                        return -1;
-                    }
-                }
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("Erro ao tentar encontrar o produto {error.message}");
-                return -1;
-            } 
-        }
-
+        
         // Pega id do fornecedor para inserir na tabela produto
         private int ObterIdForn(string nomeFornecedor)
         {
             try
             {
-                string query = @"SELECT id_fornecedor FROM fornecedor WHERE nome = @nomeFornecedor;";
-
-                using (MySqlCommand command = new MySqlCommand(query, Conexao))
+                using (MySqlConnection Conexao = new MySqlConnection(data_source))
                 {
-                    command.Parameters.AddWithValue("@nomeFornecedor", nomeFornecedor.ToString());
+                    Conexao.Open();
+                    string query = @"SELECT id_fornecedor FROM fornecedor WHERE nome = @nomeFornecedor;";
 
-                    var result = command.ExecuteScalar();
+                    using (MySqlCommand command = new MySqlCommand(query, Conexao))
+                    {
+                        command.Parameters.AddWithValue("@nomeFornecedor", nomeFornecedor.ToString());
 
-                    if(result != null)
-                    {
-                        return Convert.ToInt32(result);
-                    }
-                    else
-                    {
-                        return -1;
+                        var result = command.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            return Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            return -1;
+                        }
                     }
                 }
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao obter id do fornecedor: {erro.Message}");
+                MessageBox.Show($"Erro ao obter id do fornecedor: {erro.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
         }
+
 
 
         private void AtualizarDataGridView()
         {
             string sqlSelect = @"SELECT * FROM produto;";
 
-            using (MySqlDataAdapter adapter = new MySqlDataAdapter(sqlSelect, data_source))
+            using (MySqlDataAdapter Conexao = new MySqlDataAdapter(sqlSelect, data_source))
             {
                 DataTable table = new DataTable();
-                adapter.Fill(table);
+                Conexao.Fill(table);
                 dataGridViewProdutos.DataSource = table;
             }
         }
 
         private void frm_produtos_Load(object sender, EventArgs e)
         {
-            // Adicione esta linha para instanciar o objeto Conexao
             Conexao = new MySqlConnection(data_source);
-            
+
             AtualizarDataGridView();
+            AtualizarListBoxCategorias();
 
             PreencherComboBox();
         }
@@ -320,49 +390,55 @@ namespace Projeto_Faculdade
         // Botão de excluir que vai coletar a linha em que você clicar do dataGridView e apagar ela:
         private void bnt_excluir(object sender, EventArgs e)
         {
-            // Verificando se você clicou em uma linha
-            if (dataGridViewProdutos.SelectedRows.Count > 0)
+            try { 
+                // Verificando se você clicou em uma linha
+                if (dataGridViewProdutos.SelectedRows.Count > 0)
+                {
+                    // Recebendo a linha
+                    DataGridViewRow linhaSelecionada = dataGridViewProdutos.SelectedRows[0];
+
+                    // Obtendo os valores das colunas necessárias
+                    string nomeProduto = linhaSelecionada.Cells["Nome"].Value.ToString();
+                    string quantidadeProduto = linhaSelecionada.Cells["Quantidade"].Value.ToString();
+                    DateTime validadeProduto = Convert.ToDateTime(linhaSelecionada.Cells["Validade"].Value);
+
+                    // Removendo da lista de produtos aquela linha selecionada
+                    Produto produtoSelecionado = listaProdutos.FirstOrDefault(p =>
+                        p.Nome == nomeProduto &&
+                        p.Quantidade == quantidadeProduto &&
+                        p.Validade == validadeProduto);
+
+                    listaProdutos.Remove(produtoSelecionado);
+
+                    // Excluindo do banco de dados
+                    ExcluirProdutoDoBanco(nomeProduto, Convert.ToInt32(quantidadeProduto), validadeProduto);
+
+                    // Atualizando o dataGridView
+                    AtualizarDataGridView();
+                }
+                else
+                {
+                    // Mensagem caso a pessoa não tenha clicado em nenhuma linha
+                    MessageBox.Show("Selecione um produto para excluir");
+                }
+            } catch(Exception error) 
             {
-                // Recebendo a linha
-                DataGridViewRow linhaSelecionada = dataGridViewProdutos.SelectedRows[0];
-
-                // Obtendo os valores das colunas necessárias
-                string nomeProduto = linhaSelecionada.Cells["Nome"].Value.ToString();
-                string quantidadeProduto = linhaSelecionada.Cells["Quantidade"].Value.ToString();
-                DateTime validadeProduto = Convert.ToDateTime(linhaSelecionada.Cells["Validade"].Value);
-
-                // Removendo da lista de produtos aquela linha selecionada
-                Produto produtoSelecionado = listaProdutos.FirstOrDefault(p =>
-                    p.Nome == nomeProduto &&
-                    p.Quantidade == quantidadeProduto &&
-                    p.Validade == validadeProduto);
-
-                listaProdutos.Remove(produtoSelecionado);
-
-                // Excluindo do banco de dados
-                ExcluirProdutoDoBanco(nomeProduto, Convert.ToInt32(quantidadeProduto), validadeProduto);
-
-                // Atualizando o dataGridView
-                AtualizarDataGridView();
-            }
-            else
-            {
-                // Mensagem caso a pessoa não tenha clicado em nenhuma linha
-                MessageBox.Show("Selecione um produto para excluir");
+                MessageBox.Show($"Erro ao apagar o produto: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
 
         private void ExcluirProdutoDoBanco(string nomeProduto, int quantidadeProduto, DateTime validadeProduto)
         {
-            using (MySqlConnection conexao = new MySqlConnection(data_source))
+            using (MySqlConnection Conexao = new MySqlConnection(data_source))
             {
                 try
                 {
-                    conexao.Open();
+                    Conexao.Open();
 
                     using (MySqlCommand cmd_excluirProduto = new MySqlCommand())
                     {
-                        cmd_excluirProduto.Connection = conexao;
+                        cmd_excluirProduto.Connection = Conexao;
                         cmd_excluirProduto.CommandText = "DELETE FROM produto WHERE nome = @nome AND quantidade = @quantidade AND validade = @validade";
                         cmd_excluirProduto.Parameters.AddWithValue("@nome", nomeProduto);
                         cmd_excluirProduto.Parameters.AddWithValue("@quantidade", quantidadeProduto);
@@ -374,43 +450,47 @@ namespace Projeto_Faculdade
 
                     MessageBox.Show("Produto excluído do banco de dados.");
                 }
-                catch (Exception ex)
+                catch (Exception error)
                 {
-                    MessageBox.Show("Erro ao excluir produto do banco de dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Erro ao excluir produto do banco de dados: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private void PreencherComboBox()
         {
-            MySqlConnection conexao = new MySqlConnection(data_source);
+            MySqlConnection Conexao = new MySqlConnection(data_source);
 
             string queryFornecedor = @"SELECT nome FROM fornecedor ORDER BY id_fornecedor;";
 
             try
             {
-                conexao.Open();
+                Conexao.Open();
 
-                MySqlCommand command = new MySqlCommand(queryFornecedor, conexao);
+                MySqlCommand command = new MySqlCommand(queryFornecedor, Conexao);
+
+                List<string> listaDeFornecedores = new List<string>();
 
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
                         string valor = reader["nome"].ToString();
-                        cb_fornecedor.Items.Add(valor);
+                        listaDeFornecedores.Add(valor);
                     }
                 }
+
+                cb_fornecedor.DataSource = listaDeFornecedores;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
+                MessageBox.Show($"Erro ao acessar o banco de dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                if (conexao.State == ConnectionState.Open)
+                if (Conexao.State == ConnectionState.Open)
                 {
-                    conexao.Close();
+                    Conexao.Close();
                 }
             }
         }
