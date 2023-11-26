@@ -144,12 +144,13 @@
             this.comboBoxFormaPag.Items.AddRange(new object[] {
             "Crédito",
             "Débito",
-            "Boleto"});
+            "Boleto",
+            "Dinheiro"});
             this.comboBoxFormaPag.Location = new System.Drawing.Point(280, 444);
             this.comboBoxFormaPag.Name = "comboBoxFormaPag";
             this.comboBoxFormaPag.Size = new System.Drawing.Size(197, 28);
             this.comboBoxFormaPag.TabIndex = 11;
-            this.comboBoxFormaPag.Text = "Dinheiro";
+            this.comboBoxFormaPag.Text = "Nenhuma";
             // 
             // label7
             // 

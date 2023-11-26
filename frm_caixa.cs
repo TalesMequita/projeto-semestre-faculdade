@@ -71,13 +71,24 @@ namespace Projeto_Faculdade
                             }
                         }
                     }
-
+                    RemoverProdutosZerados(connection);
                 }
             } catch (Exception error) 
             {
                 MessageBox.Show($"Erro ao tentar conectar ao banco de dados! Detalhes: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void RemoverProdutosZerados(MySqlConnection connection)
+        {
+            string sqlRemover = "DELETE FROM produto WHERE quantidade <= 0;";
+
+            using (MySqlCommand commandRemover = new MySqlCommand(sqlRemover, connection))
+            {
+                commandRemover.ExecuteNonQuery();
+            }
+        }
+
 
         private void AtualizarLabelsPrecoTotal()
         {
@@ -213,18 +224,6 @@ namespace Projeto_Faculdade
                     connection.Open();
 
                     string sqlProduto = "UPDATE produto SET quantidade = quantidade - @quantidadeMenos WHERE codigo_produto = @codigo;";
-
-                    foreach (var produtoCodigo in produtosCodigos)
-                    {
-                        using (MySqlCommand command = new MySqlCommand(sqlProduto, connection))
-                        {
-                            var quantidadeMenos = Convert.ToInt32(textBoxQuantidade.Text);
-
-                            command.Parameters.AddWithValue("@codigo", produtoCodigo.CodigoProdutoList);
-                            command.Parameters.AddWithValue("@quantidadeMenos", quantidadeMenos);
-                            command.ExecuteNonQuery();
-                        }
-                    }
                     string formaPagamento = comboBoxFormaPag.SelectedItem?.ToString();
 
                     if (formaPagamento != null)
@@ -233,7 +232,7 @@ namespace Projeto_Faculdade
 
                         if (idFormaPagamento != -1)
                         {
-                            string sqlVenda = "INSERT INTO venda(data_venda, valor, id_funcionario, forma_pagamento) VALUES (NOW(), @valor, @id_funcionario, @idFormaPagamento);";
+                            string sqlVenda = "INSERT INTO venda(data_venda, valor, id_funcionario, frm_pagamento) VALUES (NOW(), @valor, @id_funcionario, @idFormaPagamento);";
 
                             using (MySqlCommand commandVenda = new MySqlCommand(sqlVenda, connection))
                             {
@@ -259,6 +258,23 @@ namespace Projeto_Faculdade
                                                 commandVenda.Parameters.AddWithValue("@id_funcionario", idFuncionario);
                                                 commandVenda.Parameters.AddWithValue("@idFormaPagamento", idFormaPagamento);
                                                 commandVenda.ExecuteNonQuery();
+                                                MessageBox.Show("Venda Concluida", "Sucesso!.", MessageBoxButtons.OK);
+
+                                                foreach (var produtoCodigo in produtosCodigos)
+                                                {
+                                                    using (MySqlCommand command = new MySqlCommand(sqlProduto, connection))
+                                                    {
+                                                        var quantidadeMenos = Convert.ToInt32(textBoxQuantidade.Text);
+
+                                                        command.Parameters.AddWithValue("@codigo", produtoCodigo.CodigoProdutoList);
+                                                        command.Parameters.AddWithValue("@quantidadeMenos", quantidadeMenos);
+                                                        command.ExecuteNonQuery();
+                                                    }
+                                                }
+
+                                                dataGridViewCompras.DataSource = null;
+                                                dataGridViewCompras.Rows.Clear();
+                                                produtosCategorias.Clear();
                                             }
                                             else
                                             {
@@ -270,6 +286,7 @@ namespace Projeto_Faculdade
                                             MessageBox.Show("Funcionário não encontrado!", "Erro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         }
                                     }
+
                                 }
                                 catch (Exception error)
                                 {
