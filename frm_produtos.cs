@@ -375,7 +375,6 @@ namespace Projeto_Faculdade
         private void LimparCaixas()
         {
             txt_nome.Clear();
-            txt_custo.Clear();
             txt_valor.Clear();
             txt_quantidade.Clear();
             date_validade.Value = DateTime.Now; // Definindo para a data de hoje

@@ -47,8 +47,6 @@
             this.itemFaturamento = new System.Windows.Forms.ToolStripMenuItem();
             this.itemEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_custo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.date_validade = new System.Windows.Forms.DateTimePicker();
             this.txt_quantidade = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,7 +63,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(16, 100);
+            this.label1.Location = new System.Drawing.Point(16, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 0;
@@ -74,9 +72,9 @@
             // txt_nome
             // 
             this.txt_nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_nome.Location = new System.Drawing.Point(141, 94);
+            this.txt_nome.Location = new System.Drawing.Point(141, 122);
             this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(436, 26);
+            this.txt_nome.Size = new System.Drawing.Size(154, 26);
             this.txt_nome.TabIndex = 1;
             // 
             // txt_valor
@@ -232,30 +230,11 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(16, 133);
+            this.label5.Location = new System.Drawing.Point(16, 160);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 15;
             this.label5.Text = "VALIDADE:";
-            // 
-            // txt_custo
-            // 
-            this.txt_custo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_custo.Location = new System.Drawing.Point(141, 159);
-            this.txt_custo.Name = "txt_custo";
-            this.txt_custo.Size = new System.Drawing.Size(154, 26);
-            this.txt_custo.TabIndex = 18;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(16, 165);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "CUSTO:";
             // 
             // date_validade
             // 
@@ -263,7 +242,7 @@
             this.date_validade.CustomFormat = "9999/12/31";
             this.date_validade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.date_validade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_validade.Location = new System.Drawing.Point(141, 127);
+            this.date_validade.Location = new System.Drawing.Point(141, 154);
             this.date_validade.MinDate = new System.DateTime(2023, 11, 23, 0, 0, 0, 0);
             this.date_validade.Name = "date_validade";
             this.date_validade.Size = new System.Drawing.Size(154, 26);
@@ -346,8 +325,6 @@
             this.Controls.Add(this.txt_quantidade);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.date_validade);
-            this.Controls.Add(this.txt_custo);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label4);
@@ -393,8 +370,6 @@
         private System.Windows.Forms.ToolStripMenuItem itemFaturamento;
         private System.Windows.Forms.ToolStripMenuItem itemEstoque;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_custo;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker date_validade;
         private System.Windows.Forms.TextBox txt_quantidade;
         private System.Windows.Forms.Label label7;
