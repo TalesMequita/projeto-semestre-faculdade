@@ -93,7 +93,6 @@ C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\bin\Debu
 C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Tales Mequita\Desktop\Projeto-CLONE\projeto-semestre-faculdade\obj\Debug\Projeto Faculdade.csproj.CopyComplete
-C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\obj\Debug\Projeto_Faculdade.frm_erro_cep.resources
 C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\bin\Debug\BouncyCastle.Cryptography.dll
 C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\bin\Debug\Google.Protobuf.dll
 C:\Users\esdras14j\Documents\ESTUDOS\Faculdade\TERCEIRO SEMESTRE\projeto-semestre-faculdade\bin\Debug\K4os.Compression.LZ4.dll

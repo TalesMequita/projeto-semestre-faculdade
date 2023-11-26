@@ -54,7 +54,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btn_limpar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxCategoria = new System.Windows.Forms.ListBox();
             this.cb_fornecedor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -135,6 +135,7 @@
             // 
             // dataGridViewProdutos
             // 
+            this.dataGridViewProdutos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProdutos.Location = new System.Drawing.Point(19, 371);
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
@@ -311,26 +312,27 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "FONECEDOR:";
             // 
-            // listBox1
+            // listBoxCategoria
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(450, 159);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(195, 124);
-            this.listBox1.TabIndex = 24;
+            this.listBoxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listBoxCategoria.FormattingEnabled = true;
+            this.listBoxCategoria.ItemHeight = 20;
+            this.listBoxCategoria.Items.AddRange(new object[] {
+            "Nenhuma"});
+            this.listBoxCategoria.Location = new System.Drawing.Point(450, 159);
+            this.listBoxCategoria.Name = "listBoxCategoria";
+            this.listBoxCategoria.Size = new System.Drawing.Size(195, 124);
+            this.listBoxCategoria.TabIndex = 24;
             // 
             // cb_fornecedor
             // 
             this.cb_fornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_fornecedor.FormattingEnabled = true;
-            this.cb_fornecedor.Items.AddRange(new object[] {
-            "Nenhum"});
             this.cb_fornecedor.Location = new System.Drawing.Point(141, 259);
             this.cb_fornecedor.Name = "cb_fornecedor";
             this.cb_fornecedor.Size = new System.Drawing.Size(154, 28);
             this.cb_fornecedor.TabIndex = 26;
+            this.cb_fornecedor.Text = "Nenhum";
             // 
             // frm_produtos
             // 
@@ -339,7 +341,7 @@
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(678, 544);
             this.Controls.Add(this.cb_fornecedor);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxCategoria);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_quantidade);
             this.Controls.Add(this.label7);
@@ -398,7 +400,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_limpar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxCategoria;
         private System.Windows.Forms.ComboBox cb_fornecedor;
     }
 }
