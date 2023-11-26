@@ -34,6 +34,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +51,6 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
@@ -62,9 +62,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,14 +112,14 @@
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.bnt_cad_produto);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
             this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.bnt_cad_categoria);
             // 
@@ -135,21 +136,21 @@
             // itemVendas
             // 
             this.itemVendas.Name = "itemVendas";
-            this.itemVendas.Size = new System.Drawing.Size(180, 22);
+            this.itemVendas.Size = new System.Drawing.Size(142, 22);
             this.itemVendas.Text = "Vendas";
             this.itemVendas.Click += new System.EventHandler(this.bnt_relat_vendas);
             // 
             // itemFaturamento
             // 
             this.itemFaturamento.Name = "itemFaturamento";
-            this.itemFaturamento.Size = new System.Drawing.Size(180, 22);
+            this.itemFaturamento.Size = new System.Drawing.Size(142, 22);
             this.itemFaturamento.Text = "Faturamento";
             this.itemFaturamento.Click += new System.EventHandler(this.bnt_relat_faturamento);
             // 
             // itemEstoque
             // 
             this.itemEstoque.Name = "itemEstoque";
-            this.itemEstoque.Size = new System.Drawing.Size(180, 22);
+            this.itemEstoque.Size = new System.Drawing.Size(142, 22);
             this.itemEstoque.Text = "Estoque";
             this.itemEstoque.Click += new System.EventHandler(this.bnt_relat_estoque);
             // 
@@ -239,14 +240,6 @@
             this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 27;
             this.label4.Text = "LUCROS:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(574, 249);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(494, 275);
-            this.dataGridView1.TabIndex = 42;
             // 
             // label11
             // 
@@ -364,12 +357,23 @@
             this.label13.TabIndex = 51;
             this.label13.Text = "PEDIDO MENOS VENDIDO";
             // 
+            // chart2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            this.chart2.Location = new System.Drawing.Point(601, 249);
+            this.chart2.Name = "chart2";
+            this.chart2.Size = new System.Drawing.Size(460, 274);
+            this.chart2.TabIndex = 55;
+            this.chart2.Text = "chart2";
+            // 
             // frm_faturamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(1105, 535);
+            this.Controls.Add(this.chart2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -381,7 +385,6 @@
             this.Controls.Add(this.dateTimePicker4);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker2);
@@ -390,6 +393,8 @@
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frm_faturamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ORÇAMENTO E VENDAS";
@@ -397,7 +402,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,7 +426,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
@@ -433,5 +437,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }
 }

@@ -71,21 +71,10 @@ namespace Projeto_Faculdade
                             }
                         }
                     }
-                    RemoverProdutosZerados(connection);
                 }
             } catch (Exception error) 
             {
                 MessageBox.Show($"Erro ao tentar conectar ao banco de dados! Detalhes: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void RemoverProdutosZerados(MySqlConnection connection)
-        {
-            string sqlRemover = "DELETE FROM produto WHERE quantidade <= 0;";
-
-            using (MySqlCommand commandRemover = new MySqlCommand(sqlRemover, connection))
-            {
-                commandRemover.ExecuteNonQuery();
             }
         }
 
