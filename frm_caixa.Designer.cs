@@ -47,13 +47,11 @@
             this.itemVendas = new System.Windows.Forms.ToolStripMenuItem();
             this.itemFaturamento = new System.Windows.Forms.ToolStripMenuItem();
             this.itemEstoque = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bnt_adicionar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.preco_total = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCompras)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(236, 34);
+            this.label1.Location = new System.Drawing.Point(208, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(347, 31);
             this.label1.TabIndex = 0;
@@ -72,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(455, 196);
+            this.label2.Location = new System.Drawing.Point(441, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 20);
             this.label2.TabIndex = 1;
@@ -83,7 +81,7 @@
             this.nome_prod.AutoSize = true;
             this.nome_prod.BackColor = System.Drawing.Color.Transparent;
             this.nome_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.nome_prod.Location = new System.Drawing.Point(275, 124);
+            this.nome_prod.Location = new System.Drawing.Point(246, 103);
             this.nome_prod.Name = "nome_prod";
             this.nome_prod.Size = new System.Drawing.Size(269, 29);
             this.nome_prod.TabIndex = 2;
@@ -94,7 +92,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(216, 196);
+            this.label5.Location = new System.Drawing.Point(202, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 20);
             this.label5.TabIndex = 4;
@@ -103,7 +101,7 @@
             // textBoxQuantidade
             // 
             this.textBoxQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBoxQuantidade.Location = new System.Drawing.Point(455, 219);
+            this.textBoxQuantidade.Location = new System.Drawing.Point(441, 174);
             this.textBoxQuantidade.Name = "textBoxQuantidade";
             this.textBoxQuantidade.Size = new System.Drawing.Size(111, 23);
             this.textBoxQuantidade.TabIndex = 6;
@@ -111,7 +109,7 @@
             // textBoxCodigo
             // 
             this.textBoxCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBoxCodigo.Location = new System.Drawing.Point(220, 219);
+            this.textBoxCodigo.Location = new System.Drawing.Point(206, 174);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(70, 23);
             this.textBoxCodigo.TabIndex = 7;
@@ -120,7 +118,7 @@
             // 
             this.dataGridViewCompras.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCompras.Location = new System.Drawing.Point(110, 248);
+            this.dataGridViewCompras.Location = new System.Drawing.Point(96, 203);
             this.dataGridViewCompras.Name = "dataGridViewCompras";
             this.dataGridViewCompras.Size = new System.Drawing.Size(547, 172);
             this.dataGridViewCompras.TabIndex = 8;
@@ -129,7 +127,7 @@
             // 
             this.bnt_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bnt_confirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bnt_confirmar.Location = new System.Drawing.Point(131, 446);
+            this.bnt_confirmar.Location = new System.Drawing.Point(117, 401);
             this.bnt_confirmar.Name = "bnt_confirmar";
             this.bnt_confirmar.Size = new System.Drawing.Size(116, 26);
             this.bnt_confirmar.TabIndex = 9;
@@ -146,7 +144,7 @@
             "Débito",
             "Boleto",
             "Dinheiro"});
-            this.comboBoxFormaPag.Location = new System.Drawing.Point(280, 444);
+            this.comboBoxFormaPag.Location = new System.Drawing.Point(266, 399);
             this.comboBoxFormaPag.Name = "comboBoxFormaPag";
             this.comboBoxFormaPag.Size = new System.Drawing.Size(197, 28);
             this.comboBoxFormaPag.TabIndex = 11;
@@ -157,7 +155,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(283, 424);
+            this.label7.Location = new System.Drawing.Point(269, 379);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(172, 17);
             this.label7.TabIndex = 12;
@@ -172,7 +170,7 @@
             this.relatorioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(786, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(773, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -237,19 +235,11 @@
             this.itemEstoque.Text = "Estoque";
             this.itemEstoque.Click += new System.EventHandler(this.bnt_relat_estoque);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 79);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 105);
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            // 
             // bnt_adicionar
             // 
             this.bnt_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bnt_adicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bnt_adicionar.Location = new System.Drawing.Point(663, 248);
+            this.bnt_adicionar.Location = new System.Drawing.Point(649, 203);
             this.bnt_adicionar.Name = "bnt_adicionar";
             this.bnt_adicionar.Size = new System.Drawing.Size(116, 26);
             this.bnt_adicionar.TabIndex = 33;
@@ -262,7 +252,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(507, 452);
+            this.label3.Location = new System.Drawing.Point(493, 407);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 34;
@@ -273,7 +263,7 @@
             this.preco_total.AutoSize = true;
             this.preco_total.BackColor = System.Drawing.Color.Transparent;
             this.preco_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.preco_total.Location = new System.Drawing.Point(576, 452);
+            this.preco_total.Location = new System.Drawing.Point(562, 407);
             this.preco_total.Name = "preco_total";
             this.preco_total.Size = new System.Drawing.Size(61, 20);
             this.preco_total.TabIndex = 35;
@@ -284,11 +274,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
-            this.ClientSize = new System.Drawing.Size(786, 513);
+            this.ClientSize = new System.Drawing.Size(773, 443);
             this.Controls.Add(this.preco_total);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bnt_adicionar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBoxFormaPag);
@@ -300,6 +289,8 @@
             this.Controls.Add(this.nome_prod);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frm_caixa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CAIXA DE ATENDIMENTO";
@@ -307,7 +298,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCompras)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,7 +324,6 @@
         private System.Windows.Forms.ToolStripMenuItem itemFaturamento;
         private System.Windows.Forms.ToolStripMenuItem itemEstoque;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bnt_adicionar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label preco_total;
