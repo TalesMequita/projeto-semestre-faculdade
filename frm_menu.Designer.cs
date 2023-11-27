@@ -47,8 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBoxFotoPerfil = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nome_interativo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPerfil)).BeginInit();
@@ -294,9 +292,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label1.Location = new System.Drawing.Point(255, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(427, 31);
+            this.label1.Size = new System.Drawing.Size(430, 31);
             this.label1.TabIndex = 9;
-            this.label1.Text = "CENTRAL DE SUPERMERCADO";
+            this.label1.Text = "CENTRAL DO SUPERMERCADO";
             // 
             // button1
             // 
@@ -321,40 +319,19 @@
             // 
             // pictureBoxFotoPerfil
             // 
-            this.pictureBoxFotoPerfil.Location = new System.Drawing.Point(12, 48);
+            this.pictureBoxFotoPerfil.Image = global::Projeto_Faculdade.Properties.Resources.images;
+            this.pictureBoxFotoPerfil.Location = new System.Drawing.Point(0, 27);
             this.pictureBoxFotoPerfil.Name = "pictureBoxFotoPerfil";
-            this.pictureBoxFotoPerfil.Size = new System.Drawing.Size(199, 153);
+            this.pictureBoxFotoPerfil.Size = new System.Drawing.Size(226, 196);
             this.pictureBoxFotoPerfil.TabIndex = 32;
             this.pictureBoxFotoPerfil.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(238, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 20);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "OLÁ";
-            // 
-            // nome_interativo
-            // 
-            this.nome_interativo.AutoSize = true;
-            this.nome_interativo.BackColor = System.Drawing.Color.Transparent;
-            this.nome_interativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nome_interativo.Location = new System.Drawing.Point(285, 119);
-            this.nome_interativo.Name = "nome_interativo";
-            this.nome_interativo.Size = new System.Drawing.Size(60, 20);
-            this.nome_interativo.TabIndex = 34;
-            this.nome_interativo.Text = "NOME,";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(351, 119);
+            this.label4.Location = new System.Drawing.Point(257, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 20);
             this.label4.TabIndex = 35;
@@ -367,8 +344,6 @@
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(784, 499);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.nome_interativo);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxFotoPerfil);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -415,8 +390,6 @@
         private System.Windows.Forms.ToolStripMenuItem itemEstoque;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBoxFotoPerfil;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label nome_interativo;
         private System.Windows.Forms.Label label4;
     }
 }

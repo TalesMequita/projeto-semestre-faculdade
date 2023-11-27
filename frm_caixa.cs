@@ -1,10 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Xml;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
+using Org.BouncyCastle.Ocsp;
 
 namespace Projeto_Faculdade
 {
@@ -64,7 +72,7 @@ namespace Projeto_Faculdade
                         dataGridViewCompras.DataSource = produtosCategorias;
                     }
 
-                    
+
                 }
             }
             catch (Exception error)
@@ -242,7 +250,7 @@ namespace Projeto_Faculdade
                                             var quantidade = Convert.ToInt32(textBoxQuantidade.Text);
 
                                             string sqlVendaProduto = "INSERT INTO venda_produto (id_venda, id_produto) VALUES (@idVenda, @idProduto);";
-                                               
+
                                             using (MySqlCommand commandVenda = new MySqlCommand(sqlVendaProduto, connection))
                                             {
                                                 commandVenda.Parameters.AddWithValue("@valor", precoTotal * quantidade);
@@ -334,7 +342,7 @@ namespace Projeto_Faculdade
                                     }
                                 }
                             }
-                            
+
                         }
                         else
                         {
