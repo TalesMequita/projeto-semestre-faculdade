@@ -63,7 +63,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+
             this.label2.Location = new System.Drawing.Point(39, 114);
+
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 20);
             this.label2.TabIndex = 1;
@@ -72,7 +75,9 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+
             this.txtNome.Location = new System.Drawing.Point(216, 108);
+          
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(363, 26);
             this.txtNome.TabIndex = 2;
@@ -80,6 +85,7 @@
             // buttonBuscar
             // 
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+
             this.buttonBuscar.Location = new System.Drawing.Point(155, 157);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(153, 37);
@@ -166,6 +172,7 @@
             // 
             this.btn_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_limpar.Location = new System.Drawing.Point(371, 157);
+
             this.btn_limpar.Name = "btn_limpar";
             this.btn_limpar.Size = new System.Drawing.Size(153, 37);
             this.btn_limpar.TabIndex = 19;
@@ -189,6 +196,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(693, 420);
+
             this.Controls.Add(this.btn_limpar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);

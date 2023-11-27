@@ -205,6 +205,7 @@ namespace Projeto_Faculdade
             }
         }
 
+
         private string ObterCategoriaSelecionada()
         {
             if (listBoxCategoria.SelectedItem != null)
@@ -268,6 +269,7 @@ namespace Projeto_Faculdade
                     insertIdProduroCategoria.CommandText = "INSERT INTO produto_categoria(codigo_produto, id_categoria) VALUES (@codigo_produto, @id_categoria)";
                     insertIdProduroCategoria.Parameters.AddWithValue("@codigo_produto", idProduto);
                     insertIdProduroCategoria.Parameters.AddWithValue("@id_categoria", idCategoria);
+
 
                     insertIdProduroCategoria.Prepare();
                     insertIdProduroCategoria.ExecuteNonQuery();
@@ -425,7 +427,7 @@ namespace Projeto_Faculdade
                 MessageBox.Show($"Erro ao apagar o produto: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        
 
         private void ExcluirProdutoDoBanco(string nomeProduto, int quantidadeProduto, DateTime validadeProduto)
         {
@@ -452,6 +454,7 @@ namespace Projeto_Faculdade
                         cmd_excluirProduto.CommandText = "DELETE FROM produto WHERE nome = @nome AND quantidade = @quantidade AND validade = @validade";
                         cmd_excluirProduto.Prepare();
                         cmd_excluirProduto.ExecuteNonQuery();
+
                     }
 
                     MessageBox.Show("Produto excluído do banco de dados.");

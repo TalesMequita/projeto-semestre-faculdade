@@ -321,6 +321,8 @@
             // pictureBoxFotoPerfil
             // 
             this.pictureBoxFotoPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFotoPerfil.Image")));
+
+
             this.pictureBoxFotoPerfil.Location = new System.Drawing.Point(0, 27);
             this.pictureBoxFotoPerfil.Name = "pictureBoxFotoPerfil";
             this.pictureBoxFotoPerfil.Size = new System.Drawing.Size(226, 196);

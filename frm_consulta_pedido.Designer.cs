@@ -51,7 +51,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+
             this.label1.Location = new System.Drawing.Point(183, 65);
+
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(338, 31);
             this.label1.TabIndex = 1;
@@ -134,7 +136,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             this.dataGridView1.Location = new System.Drawing.Point(82, 214);
+
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(511, 236);
             this.dataGridView1.TabIndex = 37;
@@ -142,7 +146,9 @@
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+
             this.btnConsultar.Location = new System.Drawing.Point(499, 173);
+
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
             this.btnConsultar.TabIndex = 33;
@@ -155,7 +161,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+
             this.label2.Location = new System.Drawing.Point(56, 188);
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 20);
             this.label2.TabIndex = 20;
@@ -164,7 +172,9 @@
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+<
             this.txtBusca.Location = new System.Drawing.Point(234, 181);
+
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(223, 26);
             this.txtBusca.TabIndex = 38;
@@ -174,7 +184,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
+
             this.ClientSize = new System.Drawing.Size(699, 478);
+
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnConsultar);
