@@ -229,6 +229,8 @@
             this.Controls.Add(this.btn_cadastrar);
             this.Controls.Add(this.txt_categoria);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frm_categorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRO DE CATEGORIAS";

@@ -425,7 +425,7 @@ namespace Projeto_Faculdade
                 MessageBox.Show($"Erro ao apagar o produto: {error.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
 
         private void ExcluirProdutoDoBanco(string nomeProduto, int quantidadeProduto, DateTime validadeProduto)
         {
@@ -438,11 +438,18 @@ namespace Projeto_Faculdade
                     using (MySqlCommand cmd_excluirProduto = new MySqlCommand())
                     {
                         cmd_excluirProduto.Connection = Conexao;
-                        cmd_excluirProduto.CommandText = "DELETE FROM produto WHERE nome = @nome AND quantidade = @quantidade AND validade = @validade";
+
+                        // Excluir registros da tabela venda_produto relacionados ao produto
+                        cmd_excluirProduto.CommandText = "DELETE FROM venda_produto WHERE id_produto IN (SELECT codigo_produto FROM produto WHERE nome = @nome AND quantidade = @quantidade AND validade = @validade)";
                         cmd_excluirProduto.Parameters.AddWithValue("@nome", nomeProduto);
                         cmd_excluirProduto.Parameters.AddWithValue("@quantidade", quantidadeProduto);
                         cmd_excluirProduto.Parameters.AddWithValue("@validade", validadeProduto);
 
+                        cmd_excluirProduto.Prepare();
+                        cmd_excluirProduto.ExecuteNonQuery();
+
+                        // Excluir o produto da tabela produto
+                        cmd_excluirProduto.CommandText = "DELETE FROM produto WHERE nome = @nome AND quantidade = @quantidade AND validade = @validade";
                         cmd_excluirProduto.Prepare();
                         cmd_excluirProduto.ExecuteNonQuery();
                     }
