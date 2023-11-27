@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MySql.Data.MySqlClient;
+
 
 namespace Projeto_Faculdade
 {
     public partial class frm_menu : Form
     {
+        private MySqlConnection Conexao;
+        private string data_source = "datasource=localhost;username=root;password=1234567;database=db_pjsistema";
+
         public frm_menu()
         {
             InitializeComponent();
