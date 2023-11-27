@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -319,7 +320,9 @@
             // 
             // pictureBoxFotoPerfil
             // 
-            this.pictureBoxFotoPerfil.Image = global::Projeto_Faculdade.Properties.Resources.images;
+            this.pictureBoxFotoPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFotoPerfil.Image")));
+
+
             this.pictureBoxFotoPerfil.Location = new System.Drawing.Point(0, 27);
             this.pictureBoxFotoPerfil.Name = "pictureBoxFotoPerfil";
             this.pictureBoxFotoPerfil.Size = new System.Drawing.Size(226, 196);
@@ -356,7 +359,9 @@
             this.Controls.Add(this.btn_cad_categorias);
             this.Controls.Add(this.btn_cad_produtos);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "frm_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU PRINCIPAL";

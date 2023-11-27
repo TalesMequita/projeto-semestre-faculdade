@@ -205,6 +205,7 @@ namespace Projeto_Faculdade
             }
         }
 
+
         private string ObterCategoriaSelecionada()
         {
             if (listBoxCategoria.SelectedItem != null)
@@ -268,6 +269,7 @@ namespace Projeto_Faculdade
                     insertIdProduroCategoria.CommandText = "INSERT INTO produto_categoria(codigo_produto, id_categoria) VALUES (@codigo_produto, @id_categoria)";
                     insertIdProduroCategoria.Parameters.AddWithValue("@codigo_produto", idProduto);
                     insertIdProduroCategoria.Parameters.AddWithValue("@id_categoria", idCategoria);
+
 
                     insertIdProduroCategoria.Prepare();
                     insertIdProduroCategoria.ExecuteNonQuery();
@@ -438,13 +440,21 @@ namespace Projeto_Faculdade
                     using (MySqlCommand cmd_excluirProduto = new MySqlCommand())
                     {
                         cmd_excluirProduto.Connection = Conexao;
-                        cmd_excluirProduto.CommandText = "DELETE FROM produto WHERE nome = @nome AND quantidade = @quantidade AND validade = @validade";
+
+                        // Excluir registros da tabela venda_produto relacionados ao produto
+                        cmd_excluirProduto.CommandText = "DELETE FROM venda_produto WHERE id_produto IN (SELECT codigo_produto FROM produto WHERE nome = @nome AND quantidade = @quantidade AND validade = @validade)";
                         cmd_excluirProduto.Parameters.AddWithValue("@nome", nomeProduto);
                         cmd_excluirProduto.Parameters.AddWithValue("@quantidade", quantidadeProduto);
                         cmd_excluirProduto.Parameters.AddWithValue("@validade", validadeProduto);
 
                         cmd_excluirProduto.Prepare();
                         cmd_excluirProduto.ExecuteNonQuery();
+
+                        // Excluir o produto da tabela produto
+                        cmd_excluirProduto.CommandText = "DELETE FROM produto WHERE nome = @nome AND quantidade = @quantidade AND validade = @validade";
+                        cmd_excluirProduto.Prepare();
+                        cmd_excluirProduto.ExecuteNonQuery();
+
                     }
 
                     MessageBox.Show("Produto excluído do banco de dados.");

@@ -63,7 +63,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(41, 160);
+
+            this.label2.Location = new System.Drawing.Point(39, 114);
+
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 20);
             this.label2.TabIndex = 1;
@@ -72,7 +75,9 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNome.Location = new System.Drawing.Point(218, 154);
+
+            this.txtNome.Location = new System.Drawing.Point(216, 108);
+          
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(363, 26);
             this.txtNome.TabIndex = 2;
@@ -80,7 +85,8 @@
             // buttonBuscar
             // 
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonBuscar.Location = new System.Drawing.Point(157, 203);
+
+            this.buttonBuscar.Location = new System.Drawing.Point(155, 157);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(153, 37);
             this.buttonBuscar.TabIndex = 3;
@@ -165,7 +171,8 @@
             // btn_limpar
             // 
             this.btn_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_limpar.Location = new System.Drawing.Point(373, 203);
+            this.btn_limpar.Location = new System.Drawing.Point(371, 157);
+
             this.btn_limpar.Name = "btn_limpar";
             this.btn_limpar.Size = new System.Drawing.Size(153, 37);
             this.btn_limpar.TabIndex = 19;
@@ -176,7 +183,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 266);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 220);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(643, 177);
@@ -188,7 +195,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
-            this.ClientSize = new System.Drawing.Size(693, 455);
+            this.ClientSize = new System.Drawing.Size(693, 420);
+
             this.Controls.Add(this.btn_limpar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
@@ -196,6 +204,8 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frm_estoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ESTOQUE";
