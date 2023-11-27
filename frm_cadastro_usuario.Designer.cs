@@ -39,10 +39,9 @@
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.cb_cargo = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bnt_cancelar = new System.Windows.Forms.Button();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_cpf = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.img_usuario = new System.Windows.Forms.PictureBox();
             this.btn_buscarImg = new System.Windows.Forms.Button();
@@ -68,6 +67,7 @@
             this.txt_estado = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.bnt_procurar = new System.Windows.Forms.Button();
+            this.maskedTextBoxCPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.img_usuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,7 +180,6 @@
             this.cb_cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_cargo.FormattingEnabled = true;
             this.cb_cargo.Items.AddRange(new object[] {
-            "Nenhum",
             "Administrador",
             "Caixa",
             "Supervisor"});
@@ -188,17 +187,18 @@
             this.cb_cargo.Name = "cb_cargo";
             this.cb_cargo.Size = new System.Drawing.Size(121, 28);
             this.cb_cargo.TabIndex = 19;
+            this.cb_cargo.Text = "Nenhum";
             // 
-            // button2
+            // bnt_cancelar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(476, 483);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 32);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "CANCELAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bnt_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bnt_cancelar.Location = new System.Drawing.Point(476, 483);
+            this.bnt_cancelar.Name = "bnt_cancelar";
+            this.bnt_cancelar.Size = new System.Drawing.Size(107, 32);
+            this.bnt_cancelar.TabIndex = 10;
+            this.bnt_cancelar.Text = "CANCELAR";
+            this.bnt_cancelar.UseVisualStyleBackColor = true;
+            this.bnt_cancelar.Click += new System.EventHandler(this.bnt_cancelar_Click);
             // 
             // txt_usuario
             // 
@@ -218,14 +218,6 @@
             this.label8.Size = new System.Drawing.Size(88, 20);
             this.label8.TabIndex = 26;
             this.label8.Text = "USUÁRIO:";
-            // 
-            // txt_cpf
-            // 
-            this.txt_cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_cpf.Location = new System.Drawing.Point(180, 140);
-            this.txt_cpf.Name = "txt_cpf";
-            this.txt_cpf.Size = new System.Drawing.Size(181, 26);
-            this.txt_cpf.TabIndex = 30;
             // 
             // label11
             // 
@@ -473,12 +465,23 @@
             this.bnt_procurar.UseVisualStyleBackColor = true;
             this.bnt_procurar.Click += new System.EventHandler(this.bnt_procurar_Click);
             // 
+            // maskedTextBoxCPF
+            // 
+            this.maskedTextBoxCPF.Culture = new System.Globalization.CultureInfo("pt-BR");
+            this.maskedTextBoxCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.maskedTextBoxCPF.Location = new System.Drawing.Point(180, 140);
+            this.maskedTextBoxCPF.Mask = "000.000.000-00";
+            this.maskedTextBoxCPF.Name = "maskedTextBoxCPF";
+            this.maskedTextBoxCPF.Size = new System.Drawing.Size(139, 26);
+            this.maskedTextBoxCPF.TabIndex = 64;
+            // 
             // frm_cadastro_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Faculdade.Properties.Resources.pal;
             this.ClientSize = new System.Drawing.Size(948, 524);
+            this.Controls.Add(this.maskedTextBoxCPF);
             this.Controls.Add(this.bnt_procurar);
             this.Controls.Add(this.txt_bairro);
             this.Controls.Add(this.label17);
@@ -502,14 +505,13 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btn_buscarImg);
             this.Controls.Add(this.img_usuario);
-            this.Controls.Add(this.txt_cpf);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cb_cargo);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.txt_nome);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bnt_cancelar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -540,10 +542,9 @@
         private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.ComboBox cb_cargo;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bnt_cancelar;
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_cpf;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox img_usuario;
         private System.Windows.Forms.Button btn_buscarImg;
@@ -569,5 +570,6 @@
         private System.Windows.Forms.TextBox txt_estado;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button bnt_procurar;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCPF;
     }
 }

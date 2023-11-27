@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MySql.Data.MySqlClient;
+
+
 namespace Projeto_Faculdade
 {
     public partial class frm_consulta_pedido : Form
     {
+        private MySqlConnection Conexao;
+        private string data_source = "datasource=localhost;username=root;password=1234567;database=db_pjsistema";
         public frm_consulta_pedido()
         {
             InitializeComponent();
@@ -113,7 +119,33 @@ namespace Projeto_Faculdade
 
         private void bnt_consulta(object sender, EventArgs e)
         {
+            try
+            {
+                Conexao = new MySqlConnection(data_source);
 
+                string nomeBusca = string.IsNullOrWhiteSpace(txtBusca.Text) ? "%" : "%" + txtBusca.Text + "%";
+                string sql = "SELECT * FROM venda WHERE id_venda LIKE @id";
+
+                Conexao.Open();
+
+                DataTable dt = new DataTable();
+                using (MySqlDataAdapter da = new MySqlDataAdapter(sql, Conexao))
+                {
+                    da.SelectCommand.Parameters.AddWithValue("id", nomeBusca);
+                    da.Fill(dt);
+                }
+
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+
+            }
+            finally
+            {
+                Conexao.Close();
+            }
         }
     }
 }

@@ -113,17 +113,22 @@ namespace Projeto_Faculdade
                 //Criar conexao cm MySQL
                 Conexao = new MySqlConnection(data_source);
 
-                string sql = "Insert Into categoria (nome)" + "Values" + "('" + txt_categoria.Text + "')";
+                string sql = "Insert Into categoria (nome) value(@nomeCategoria);";
 
                 //Executar o comando insert
-                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                using (MySqlCommand comando = new MySqlCommand(sql, Conexao))
+                {
+                    Conexao.Open();
 
-                Conexao.Open();
+                    comando.Parameters.AddWithValue("@nomeCategoria", txt_categoria.Text);
 
-                comando.ExecuteReader();
+                    comando.Prepare();
+                    comando.ExecuteNonQuery();
+                }
 
+                AtualizarDataGridView();
                 MessageBox.Show("Categoria cadastrada com sucesso!");
-
+                Limpar();
             }
             catch (Exception ex)
             {
@@ -155,7 +160,7 @@ namespace Projeto_Faculdade
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
-                dataGridView1.ClearSelection(); // Limpar as linhas existentes no DataGridView
+                dataGridViewCategoria.ClearSelection(); // Limpar as linhas existentes no DataGridView
 
                while (reader.Read())
                 {
@@ -164,7 +169,7 @@ namespace Projeto_Faculdade
                         reader.GetString(0),
                         reader.GetString(1),
                     };
-                    dataGridView1.Rows.Add(row);    
+                    dataGridViewCategoria.Rows.Add(row);    
                 }
   
             } catch (Exception ex) 
@@ -190,7 +195,7 @@ namespace Projeto_Faculdade
 
                 if (string.IsNullOrEmpty(nomeParaExcluir) ) 
                 {
-                    MessageBox.Show("Por favor, insira um nome para exluir");
+                    MessageBox.Show("Por favor, insira um nome para excluir");
                     return; 
                 }
 
@@ -223,15 +228,32 @@ namespace Projeto_Faculdade
             
         }
 
+        private void AtualizarDataGridView()
+        {
+            string sqlSelect = "select * from categoria;";
+
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(sqlSelect, data_source))
+            {
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                dataGridViewCategoria.DataSource = table;
+            }
+        }
+
         private void frm_categorias_Load(object sender, EventArgs e)
         {
+            AtualizarDataGridView();
+            MySqlConnection conexao = new MySqlConnection(data_source);
+        }
 
+        private void Limpar()
+        {
+            txt_categoria.Clear();
         }
 
         private void btn_limpar_Click(object sender, EventArgs e)
         {
-            txt_categoria.Clear();
-            dataGridView1.Rows.Clear();   
+            Limpar();
         }
     }
 }

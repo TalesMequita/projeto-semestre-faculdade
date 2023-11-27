@@ -86,19 +86,36 @@ namespace Projeto_Faculdade
                     cmd_Funcionario.Parameters.AddWithValue("@nome", txt_nome.Text);
                     cmd_Funcionario.Parameters.AddWithValue("@email", txt_email.Text);
                     cmd_Funcionario.Parameters.AddWithValue("@telefone", txt_telefone.Text);
-                    cmd_Funcionario.Parameters.AddWithValue("@CPF", txt_cpf.Text);
+                    cmd_Funcionario.Parameters.AddWithValue("@CPF", maskedTextBoxCPF.Text);
                     cmd_Funcionario.Parameters.AddWithValue("@id_contato", idContato);
                     cmd_Funcionario.Parameters.AddWithValue("@id_endereco", idEndereco);
 
                     cmd_Funcionario.Prepare();
                     cmd_Funcionario.ExecuteNonQuery();
 
-                    MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    var cadastrado = true;
+
+                    if (cadastrado)
+                    {
+
+                        frm_login frm = new frm_login();
+
+                        if (this.Visible)
+                        {
+                            this.Hide();
+                        }
+
+                        frm.ShowDialog();
+                        this.Close();
+
+                    }
                 } else
                 {
+                    var cadastrado = false;
                     MessageBox.Show("As senhas são diferentes, redigite novamente as senhas.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-               
             }
             catch (Exception ex)
             {
@@ -109,28 +126,6 @@ namespace Projeto_Faculdade
             {
                 Conexao.Close();
             }
-
-            frm_menu frm = new frm_menu();
-
-            if (this.Visible)
-            {
-                this.Hide();
-            }
-
-            frm.ShowDialog();
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frm_login frm = new frm_login();
-
-            if (this.Visible)
-            {
-                this.Hide();
-            }
-            frm.ShowDialog();
-            this.Close();
         }
 
         private void btn_buscarImg_Click(object sender, EventArgs e)
@@ -155,8 +150,6 @@ namespace Projeto_Faculdade
                     img_usuario.Controls.Add(pictureBox);
                 }
             }
-
-
         }
 
         private void btn_limparImg_Click(object sender, EventArgs e)
@@ -202,6 +195,18 @@ namespace Projeto_Faculdade
             txt_bairro.Text = "";
             maskedTextBoxCEP.Focus();
 
+        }
+
+        private void bnt_cancelar_Click(object sender, EventArgs e)
+        {
+            frm_login frm = new frm_login();
+
+            if (this.Visible)
+            {
+                this.Hide();
+            }
+            frm.ShowDialog();
+            this.Close();
         }
     }
     

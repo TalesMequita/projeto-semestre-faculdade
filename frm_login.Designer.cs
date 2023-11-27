@@ -22,8 +22,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxUsuario = new System.Windows.Forms.TextBox();
-            this.textBoxSenha = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.buttonEntrar = new System.Windows.Forms.Button();
             this.linkLabelCadastrar = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,23 +52,23 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Entre na sua conta";
             // 
-            // textBoxUsuario
+            // txtUsuario
             // 
-            this.textBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxUsuario.Location = new System.Drawing.Point(146, 114);
-            this.textBoxUsuario.Multiline = true;
-            this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(224, 25);
-            this.textBoxUsuario.TabIndex = 2;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUsuario.Location = new System.Drawing.Point(146, 114);
+            this.txtUsuario.Multiline = true;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(224, 25);
+            this.txtUsuario.TabIndex = 2;
             // 
-            // textBoxSenha
+            // txtSenha
             // 
-            this.textBoxSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxSenha.Location = new System.Drawing.Point(146, 145);
-            this.textBoxSenha.Multiline = true;
-            this.textBoxSenha.Name = "textBoxSenha";
-            this.textBoxSenha.Size = new System.Drawing.Size(224, 26);
-            this.textBoxSenha.TabIndex = 3;
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtSenha.Location = new System.Drawing.Point(146, 145);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(224, 26);
+            this.txtSenha.TabIndex = 3;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // buttonEntrar
             // 
@@ -128,10 +128,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabelCadastrar);
             this.Controls.Add(this.buttonEntrar);
-            this.Controls.Add(this.textBoxSenha);
-            this.Controls.Add(this.textBoxUsuario);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
@@ -145,8 +147,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxUsuario;
-        private System.Windows.Forms.TextBox textBoxSenha;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button buttonEntrar;
         private System.Windows.Forms.LinkLabel linkLabelCadastrar;
         private System.Windows.Forms.Label label3;

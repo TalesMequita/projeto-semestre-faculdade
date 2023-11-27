@@ -130,12 +130,6 @@
     <Compile Include="frm_encerrar.Designer.cs">
       <DependentUpon>frm_encerrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_erro_cep.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_erro_cep.Designer.cs">
-      <DependentUpon>frm_erro_cep.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,9 +191,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_encerrar.resx">
       <DependentUpon>frm_encerrar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_erro_cep.resx">
-      <DependentUpon>frm_erro_cep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_faturamento.resx">
       <DependentUpon>frm_faturamento.cs</DependentUpon>
@@ -465,6 +456,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

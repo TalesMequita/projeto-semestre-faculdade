@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using MySql.Data.MySqlClient;
 
 namespace Projeto_Faculdade
 {
     public partial class frm_faturamento : Form
     {
+        private MySqlConnection Conexao;
+        private string data_source = "datasource=localhost;username=root;password=1234567;database=db_pjsistema";
+
         public frm_faturamento()
         {
             InitializeComponent();
@@ -104,6 +109,69 @@ namespace Projeto_Faculdade
             frm.ShowDialog();
 
             this.Close();
+        }
+
+        private void btnGerar_Click(object sender, EventArgs e)
+        {
+            GerarGraficoColunas();
+        }
+
+        private void GerarGraficoColunas()
+        {
+
+            chart1.Series.Clear();
+            chart1.Titles.Clear();
+
+            Title title = new Title();
+            title.Font = new Font("Arial", 14, FontStyle.Bold);
+            title.ForeColor = Color.Brown;
+            title.Text = "Vendas Mensais";
+            chart1.Titles.Add(title);
+
+            // Criar nova série para vendas
+            chart1.Series.Add("vendas");
+            chart1.Series["vendas"].LegendText = "Vendas";
+
+            chart1.Series["vendas"].ChartType =
+                System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            chart1.Series["vendas"].BorderWidth = 4;
+
+            // Exemplo: Definindo intervalos de 1 mês no eixo X
+            chart1.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Months;
+            chart1.ChartAreas[0].AxisX.Interval = 1;
+            chart1.ChartAreas[0].AxisX.LabelStyle.Format = "MMM"; // Formatando para exibir apenas o nome do mês
+
+            try
+            {
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
+
+                string sql = "SELECT MONTH(data_venda) AS mes, SUM(valor) AS totalVendas FROM venda GROUP BY MONTH(data_venda) ORDER BY MONTH(data_venda)";
+                using (MySqlCommand cmd = new MySqlCommand(sql, Conexao))
+                {
+                    
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int mes = Convert.ToInt32(reader["mes"]);
+                            string nomeMes = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(mes);
+                            int totalVendas = Convert.ToInt32(reader["totalVendas"]);
+
+                            chart1.Series["vendas"].Points.AddXY(nomeMes, totalVendas);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao buscar dados do banco de dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+
         }
     }
 }
